@@ -1,28 +1,135 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mon Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio - Ton Nom</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style perso (optionnel) -->
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+        section {
+            padding: 80px 0;
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <h2>À propos de moi</h2>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Ton Nom</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="col-md-6">
-      <p>Description ou image</p>
+</nav>
+
+<!-- HERO -->
+<header class="bg-light text-center" style="padding-top:120px; padding-bottom:80px;">
+    <div class="container">
+        <h1 class="display-4">Ton Nom</h1>
+        <p class="lead">Étudiant en NSI / Développeur / Futur alternant</p>
+        <a href="#projects" class="btn btn-primary btn-lg">Voir mes projets</a>
     </div>
-  </div>
-</div>
+</header>
 
+<!-- A PROPOS -->
+<section id="about">
+    <div class="container">
+        <h2 class="text-center mb-4">À propos de moi</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <p>
+                    Présente-toi ici : ton parcours, ce que tu étudies,
+                    ce que tu cherches (école, alternance), tes centres d’intérêt.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-  <!-- Bootstrap JS (optionnel pour les composants interactifs) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<!-- PROJETS -->
+<section id="projects" class="bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Mes projets</h2>
+        <div class="row g-4">
+
+            <!-- PROJET 1 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="images/projet1.png" class="card-img-top" alt="Projet 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Nom du projet</h5>
+                        <p class="card-text">
+                            Courte description du projet (technos utilisées, objectif).
+                        </p>
+                        <a href="#" class="btn btn-outline-primary">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJET 2 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="images/projet2.png" class="card-img-top" alt="Projet 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Nom du projet</h5>
+                        <p class="card-text">Description rapide du projet.</p>
+                        <a href="#" class="btn btn-outline-primary">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJET 3 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="images/projet3.png" class="card-img-top" alt="Projet 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Nom du projet</h5>
+                        <p class="card-text">Description rapide du projet.</p>
+                        <a href="#" class="btn btn-outline-primary">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="container">
+        <h2 class="text-center mb-4">Contact</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <p>Email : <strong>tonmail@email.com</strong></p>
+                <p>GitHub : <a href="#">github.com/tonprofil</a></p>
+                <p>LinkedIn : <a href="#">linkedin.com/in/tonprofil</a></p>
+                <a href="cv.pdf" class="btn btn-primary mt-3">Télécharger mon CV</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">© 2026 - Ton Nom</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
