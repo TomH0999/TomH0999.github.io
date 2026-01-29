@@ -118,10 +118,13 @@
     
 <!-- FORMATIONS -->
 <section id="formations" class="py-5">
-    <div class="container">
+    <div class="container d-flex flex-column align-items-center">
         <h2 class="text-center mb-4">Formations</h2>
-        <div id="formationsCarousel" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-inner h-100 d-flex align-items-center">
+
+        <div id="formationsCarousel" class="carousel slide w-100" data-bs-ride="false">
+            <div class="carousel-inner d-flex align-items-center justify-content-center" style="min-height: 280px;">
+                <!-- min-height fixé à la hauteur du slide le plus long -->
+
                 <div class="carousel-item active">
                     <div class="p-4 px-3 px-md-5 w-100 text-wrap">
                         <h5 class="fw-bold">Licence Informatique (parcours jeux vidéo)</h5>
@@ -133,6 +136,7 @@
                         </p>
                     </div>
                 </div>
+
                 <div class="carousel-item">
                     <div class="p-4 px-3 px-md-5 w-100 text-wrap">
                         <h5 class="fw-bold">Baccalauréat général</h5>
@@ -142,6 +146,7 @@
                         </p>
                     </div>
                 </div>
+
                 <div class="carousel-item">
                     <div class="p-4 px-3 px-md-5 w-100 text-wrap">
                         <h5 class="fw-bold">Diplôme National du Brevet des collèges</h5>
@@ -150,18 +155,23 @@
                         </p>
                     </div>
                 </div>
+
             </div>
-            <!-- Bouton gauche -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#formationsCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
+
+            <!-- Boutons gris semi-transparents -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#formationsCarousel" data-bs-slide="prev" 
+                    style="background-color: rgba(0, 0, 0, 0.35); width:50px;">
+                <span class="carousel-control-prev-icon" style="filter: invert(1);"></span>
             </button>
-            <!-- Bouton droit -->
-            <button class="carousel-control-next" type="button" data-bs-target="#formationsCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#formationsCarousel" data-bs-slide="next" 
+                    style="background-color: rgba(0, 0, 0, 0.35); width:50px;">
+                <span class="carousel-control-next-icon" style="filter: invert(1);"></span>
             </button>
         </div>
     </div>
 </section>
+
 
 <!-- PROJETS -->
 <section id="projects" class="bg-light">
