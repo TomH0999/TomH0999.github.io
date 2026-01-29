@@ -118,10 +118,24 @@
 <section id="formations">
     <div class="container">
         <h2 class="text-center mb-4">Formations</h2>
+
+        <!-- Styles intégrés pour le contraste des boutons -->
+        <style>
+            .carousel-control-prev,
+            .carousel-control-next {
+                background-color: rgba(0, 0, 0, 0.35);
+                width: 50px;
+            }
+
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                filter: invert(1);
+            }
+        </style>
+
         <div id="formationsCarousel" class="carousel slide" data-bs-ride="false">
             <div class="carousel-inner text-center">
-                
-                <!-- Slide 1 -->
+
                 <div class="carousel-item active">
                     <div class="p-4">
                         <h5 class="fw-bold">Licence Informatique (parcours jeux vidéo)</h5>
@@ -132,8 +146,7 @@
                         </p>
                     </div>
                 </div>
-                
-                <!-- Slide 2 -->
+
                 <div class="carousel-item">
                     <div class="p-4">
                         <h5 class="fw-bold">Baccalauréat général</h5>
@@ -143,8 +156,7 @@
                         </p>
                     </div>
                 </div>
-                
-                <!-- Slide 3 -->
+
                 <div class="carousel-item">
                     <div class="p-4">
                         <h5 class="fw-bold">Brevet des collèges</h5>
@@ -153,21 +165,23 @@
                         </p>
                     </div>
                 </div>
+
             </div>
-            
+
             <!-- Bouton gauche -->
             <button class="carousel-control-prev" type="button" data-bs-target="#formationsCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
             </button>
-            
+
             <!-- Bouton droit -->
             <button class="carousel-control-next" type="button" data-bs-target="#formationsCarousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon"></span>
             </button>
-            
+
         </div>
     </div>
 </section>
+
 
 
 <!-- PROJETS -->
