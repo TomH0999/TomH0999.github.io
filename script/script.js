@@ -1,4 +1,4 @@
-// NAVBAR TOGGLER
+// Menu burger
 const toggler = document.getElementById('navbar-toggler');
 const nav = document.getElementById('navbar-nav');
 
@@ -6,20 +6,19 @@ toggler.addEventListener('click', () => {
     nav.classList.toggle('show');
 });
 
-// FORMATIONS CAROUSEL
-let currentSlide = 0;
-const slides = document.querySelectorAll('#formationsCarousel .carousel-item');
-const totalSlides = slides.length;
-
-document.getElementById('nextFormation').addEventListener('click', () => {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % totalSlides;
-    slides[currentSlide].classList.add('active');
-});
+// Carousel formations
+const carousel = document.getElementById('formationsCarousel');
+const items = carousel.querySelectorAll('.carousel-item');
+let index = 0;
 
 document.getElementById('prevFormation').addEventListener('click', () => {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    slides[currentSlide].classList.add('active');
+    items[index].classList.remove('active');
+    index = (index - 1 + items.length) % items.length;
+    items[index].classList.add('active');
 });
 
+document.getElementById('nextFormation').addEventListener('click', () => {
+    items[index].classList.remove('active');
+    index = (index + 1) % items.length;
+    items[index].classList.add('active');
+});
