@@ -67,7 +67,8 @@ body {
 .hero {
     background: linear-gradient(135deg, #0F0F0F, #1A1A1A);
     text-align: center;
-    padding: 5rem 1rem;
+    padding: 6rem 1rem;
+    margin-bottom: 4rem; /* séparation avec section suivante */
 }
 
 .hero .container {
@@ -102,13 +103,19 @@ body {
     background-color: #00BFBF;
 }
 
+/* SECTIONS - séparation verticale */
+section {
+    padding: 4rem 0;
+    border-top: 1px solid #222; /* séparation subtile */
+    border-bottom: 1px solid #222;
+}
+
 /* A PROPOS */
 #about .about-content {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     align-items: center;
-    margin-top: 2rem;
     justify-content: center; /* centre horizontalement */
 }
 
@@ -128,7 +135,6 @@ body {
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center; /* centre horizontalement */
-    margin-top: 2rem;
 }
 
 .competences-grid div {
@@ -184,7 +190,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
     justify-items: center; /* centre chaque carte */
 }
 
@@ -239,7 +244,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-top: 2rem;
     justify-content: center; /* centre les éléments */
 }
 
@@ -256,7 +260,7 @@ body {
 /* FOOTER */
 .footer {
     text-align: center;
-    padding: 1rem;
+    padding: 2rem 1rem;
     background-color: #1E1E1E;
     margin-top: 3rem;
     border-top: 2px solid #00FFFF;
@@ -303,4 +307,3 @@ body {
         padding: 2rem; /* moins de padding sur petit écran */
     }
 }
-
