@@ -1,247 +1,169 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portfolio - Tom HACOT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio - Tom HACOT</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<style>
-:root {
-    --bg: #0e1015;
-    --bg-light: #151821;
-    --card: #10131a;
-    --primary: #6c8cff;
-    --secondary: #9aa4ff;
-    --text: #e6e8f0;
-    --muted: #9aa0b3;
-}
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-[data-theme="light"] {
-    --bg: #f4f6fb;
-    --bg-light: #ffffff;
-    --card: #ffffff;
-    --text: #1c1e26;
-    --muted: #555;
-}
+    <style>
+        :root {
+            --bg-dark: #0e1015;
+            --bg-light: #151821;
+            --primary: #6c8cff;
+            --secondary: #9aa4ff;
+            --text-light: #e6e8f0;
+            --text-muted: #9aa0b3;
+        }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    scroll-behavior: smooth;
-}
+        [data-theme="light"] {
+            --bg-dark: #f4f6fb;
+            --bg-light: #ffffff;
+            --text-light: #1c1e26;
+            --text-muted: #555;
+        }
 
-section { padding: 90px 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            scroll-behavior: smooth;
+        }
 
-h1,h2,h3,h4,h5 {
-    font-family: 'Orbitron', sans-serif;
-}
+        section { padding: 90px 0; }
 
-h2 { color: var(--secondary); }
+        h1, h2, h3, h4, h5 {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.5px;
+        }
 
-.bg-light { background: var(--bg-light) !important; }
+        h2 { color: var(--secondary); }
 
-a { color: var(--primary); text-decoration: none; }
-a:hover { color: var(--secondary); }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { color: var(--secondary); }
 
-.btn-primary {
-    background: linear-gradient(135deg,var(--primary),var(--secondary));
-    border: none;
-}
+        .bg-light { background-color: var(--bg-light) !important; }
 
-.card {
-    background: var(--card);
-    border: 1px solid #1f2330;
-    border-radius: 16px;
-    transition: .3s;
-}
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border: none;
+        }
 
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0,0,0,.35);
-}
+        .btn-outline-primary {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
 
-.card-title { color: var(--secondary); }
-.card-text { color: var(--muted); font-size:.95rem; }
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: #fff;
+        }
 
-.fade-in {
-    opacity:0;
-    transform: translateY(30px);
-    transition: .8s ease;
-}
+        /* Cards */
+        .card {
+            background-color: #10131a;
+            border: 1px solid #1f2330;
+            border-radius: 16px;
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
 
-.fade-in.visible {
-    opacity:1;
-    transform:none;
-}
-</style>
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 40px rgba(0,0,0,.4);
+        }
+
+        .card-title { color: var(--secondary); }
+        .card-text { color: var(--text-muted); }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: .8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: none;
+        }
+    </style>
 </head>
 
 <body data-theme="dark">
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background:#0e1015;border-bottom:1px solid #1f2330;">
-<div class="container">
-<a class="navbar-brand fw-bold" href="#">Tom HACOT</a>
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Tom HACOT</a>
 
-<button class="btn btn-sm btn-outline-light ms-auto me-3" onclick="toggleTheme()">🌙 / ☀️</button>
+        <button class="btn btn-sm btn-outline-light me-3" onclick="toggleTheme()">🌙 / ☀️</button>
 
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-<span class="navbar-toggler-icon"></span>
-</button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<div class="collapse navbar-collapse" id="nav">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
-<li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
-<li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
-<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-</ul>
-</div>
-</div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+                <li class="nav-item"><a class="nav-link" href="#formations">Formations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
 <!-- HERO -->
-<header class="text-center fade-in" style="padding:160px 0;background:radial-gradient(circle at top,#1c2040,#0e1015);">
-<div class="container">
-<h1 class="display-4 fw-bold">Tom HACOT</h1>
-<p class="lead text-muted">Game Developer · Programmer</p>
-<a href="#projects" class="btn btn-primary btn-lg mt-3">Voir mes projets</a>
-</div>
+<header class="text-center fade-in" style="padding-top:160px; padding-bottom:120px; background:radial-gradient(circle at top,#1c2040,#0e1015);">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Tom HACOT</h1>
+        <p class="lead text-muted">Futur Game Developer</p>
+        <a href="#projects" class="btn btn-primary btn-lg mt-3">Voir mes projets</a>
+    </div>
 </header>
 
-<!-- PROJETS -->
-<section id="projects">
-<div class="container">
-<h2 class="text-center mb-5 fade-in">Projets</h2>
-<div class="row g-4">
-
-<!-- Winter On The Rampage -->
-<div class="col-md-4 fade-in">
-<div class="card h-100">
-<img src="images/WinterOnTheRampage.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Winter On The Rampage</h5>
-<p class="card-text">GameMaker Studio 2 – Micro Jam 052 (2026)</p>
-<a href="pages secondaires/WinterOnTheRampage.html" target="_blank" class="btn btn-outline-primary">Voir le projet</a>
-</div>
-</div>
-</div>
-
-<!-- Labyrinth 3D -->
-<div class="col-md-4 fade-in">
-<div class="card h-100">
-<img src="images/Labyrinth3D.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Labyrinth 3D</h5>
-<p class="card-text">Unreal Engine – Blueprint</p>
-<a href="pages secondaires/Labyrinth3D.html" target="_blank" class="btn btn-outline-primary">Voir le projet</a>
-</div>
-</div>
-</div>
-
-<!-- Simpsons -->
-<div class="col-md-4 fade-in">
-<div class="card h-100">
-<img src="images/SimpsonsHouseTycoonFin.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Simpsons House Tycoon</h5>
-<p class="card-text">Roblox – Luau</p>
-<a href="pages secondaires/SimpsonsHouseTycoon.html" target="_blank" class="btn btn-outline-primary">Voir le projet</a>
-</div>
-</div>
-</div>
-
-<!-- Runner 3D -->
-<div class="col-md-4 fade-in">
-<div class="card h-100">
-<img src="images/Runner3D.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Runner 3D</h5>
-<p class="card-text">Unity (C#)</p>
-<a href="pages secondaires/Runner3D.html" target="_blank" class="btn btn-outline-primary">Voir le projet</a>
-</div>
-</div>
-</div>
-
-<!-- Dungeon Explorer -->
-<div class="col-md-4 fade-in">
-<div class="card h-100">
-<img src="images/DungeonExplorer.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Dungeon Explorer</h5>
-<p class="card-text">Construct 3</p>
-<a href="pages secondaires/DungeonExplorer.html" target="_blank" class="btn btn-outline-primary">Voir le projet</a>
-</div>
-</div>
-</div>
-
-<!-- Jumping Knight -->
-<div class="col-md-4 fade-in">
-<div class="card h-100">
-<img src="images/JumpingKnightMilieu2.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Jumping Knight</h5>
-<p class="card-text">Construct 3</p>
-<a href="pages secondaires/JumpingKnight.html" target="_blank" class="btn btn-outline-primary">Voir le projet</a>
-</div>
-</div>
-</div>
-
-<!-- Mastermind -->
-<div class="col-md-4 fade-in">
-<div class="card h-100">
-<img src="images/MastermindPython.png" class="card-img-top">
-<div class="card-body">
-<h5 class="card-title">Mastermind Python</h5>
-<p class="card-text">Python</p>
-<a href="pages secondaires/MastermindPython.html" target="_blank" class="btn btn-outline-primary">Voir le projet</a>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- CONTACT -->
+<!-- Toutes les sections héritent automatiquement de l’animation -->
+<section id="about" class="fade-in">
+<section id="competences" class="bg-light fade-in">
+<section id="projects" class="fade-in">
 <section id="contact" class="bg-light fade-in">
-<div class="container text-center">
-<h2 class="mb-4">Contact</h2>
-<img src="images/photo CV.png" class="img-fluid rounded mb-4" style="max-width:200px">
-<p><strong>📞</strong> +33 7 55 67 62 06</p>
-<p><strong>✉️</strong> tomhacot@gmail.com</p>
-<p><a href="documents/CV.pdf" target="_blank" class="btn btn-primary mt-2">Voir mon CV</a></p>
-</div>
-</section>
 
-<footer class="text-center py-4" style="border-top:1px solid #1f2330;">
-<p class="text-muted mb-0">© 2026 · Tom HACOT · Game Developer</p>
+<!-- FOOTER -->
+<footer style="background-color:#0a0c11;border-top:1px solid #1f2330;" class="text-center py-4 fade-in">
+    <p class="mb-0 text-muted">© 2026 · Tom HACOT · Game Developer</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
+/* Animation scroll */
 const observer = new IntersectionObserver(entries=>{
-entries.forEach(e=>{
-if(e.isIntersecting) e.target.classList.add("visible");
-});
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("visible");
+        }
+    });
 });
 document.querySelectorAll(".fade-in").forEach(el=>observer.observe(el));
 
+/* Mode clair / sombre */
 function toggleTheme(){
-const body=document.body;
-const theme=body.getAttribute("data-theme")==="dark"?"light":"dark";
-body.setAttribute("data-theme",theme);
-localStorage.setItem("theme",theme);
+    const body = document.body;
+    const theme = body.getAttribute("data-theme")==="dark" ? "light" : "dark";
+    body.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
 }
 if(localStorage.getItem("theme")){
-document.body.setAttribute("data-theme",localStorage.getItem("theme"));
+    document.body.setAttribute("data-theme", localStorage.getItem("theme"));
 }
 </script>
 
 </body>
 </html>
+
