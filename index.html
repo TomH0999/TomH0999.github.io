@@ -5,25 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio - Tom HACOT</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Style perso (optionnel) -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --bg-dark: #0e1015;
+            --bg-light: #151821;
+            --primary: #6c8cff;
+            --secondary: #9aa4ff;
+            --text-light: #e6e8f0;
+            --text-muted: #9aa0b3;
+        }
+
         body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
             scroll-behavior: smooth;
         }
+
         section {
-            padding: 80px 0;
+            padding: 90px 0;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        h2 {
+            color: var(--secondary);
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--secondary);
+        }
+
+        .bg-light {
+            background-color: var(--bg-light) !important;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border: none;
+            font-weight: 500;
+        }
+
+        .btn-outline-primary {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: #fff;
+        }
+
+        /* Cards */
+        .card {
+            background-color: #10131a;
+            border: 1px solid #1f2330;
+            border-radius: 16px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .card-title {
+            color: var(--secondary);
+        }
+
+        .card-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .card img {
+            border-radius: 16px 16px 0 0;
+        }
+
+        ul li {
+            margin-bottom: 6px;
+            color: var(--text-muted);
         }
     </style>
 </head>
+
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#0e1015; border-bottom:1px solid #1f2330;">
     <div class="container">
-        <a class="navbar-brand" href="#">Tom HACOT</a>
+        <a class="navbar-brand fw-bold" href="#">Tom HACOT</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -40,11 +125,11 @@
 </nav>
 
 <!-- HERO -->
-<header class="bg-light text-center" style="padding-top:120px; padding-bottom:80px;">
+<header class="text-center" style="padding-top:160px; padding-bottom:120px; background: radial-gradient(circle at top, #1c2040, #0e1015);">
     <div class="container">
-        <h1 class="display-4">Tom HACOT</h1>
-        <p class="lead">Futur Game Developper</p>
-        <a href="#projects" class="btn btn-primary btn-lg">Voir mes projets</a>
+        <h1 class="display-4 fw-bold">Tom HACOT</h1>
+        <p class="lead text-muted">Game Developer · Programmer</p>
+        <a href="#projects" class="btn btn-primary btn-lg mt-3">Voir mes projets</a>
     </div>
 </header>
 
@@ -53,17 +138,19 @@
     <div class="container">
         <h2 class="text-center mb-4">À propos de moi</h2>
         <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
-                <img src="images/photo Tom.jpg" alt="image" width="150" style="float: left; margin-right: 50px;" class="img-fluid rounded">
+            <div class="col-md-8">
+                <img src="images/photo Tom.jpg" width="150" class="rounded float-start me-4 mb-3">
                 <p>
-                    Je suis <strong>Tom</strong>, j'ai <strong>17 ans</strong>, je suis passionné de jeux vidéo depuis toujours et depuis quelques années, je m'intéresse beaucoup à leur création.
-                    J'ai ainsi décidé de faire de cette passion mon métier et j'ai choisi de faire une <strong>licence informatique parcours jeu vidéo</strong> au <strong>CNAM ENJMIN</strong> d'Angoulème en <strong>programmation</strong>. <br>
+                    Je suis <strong>Tom</strong>, 17 ans, passionné de jeux vidéo et de leur création.
+                    Mon objectif est de devenir <strong>game developer</strong>, spécialisé en programmation.
                 </p>
                 <p>
-                    Cette formation étant en apprentissage: <br>
+                    J’ai choisi une <strong>licence informatique parcours jeu vidéo</strong> au
+                    <strong>CNAM ENJMIN</strong> d’Angoulême, en apprentissage.
                 </p>
                 <p>
-                    Je cherche une entreprise pour effectuer une <strong>alternance</strong> à un rythme de <strong>4 jours en entreprise/1 jour en formation</strong>.
+                    Je recherche une entreprise pour une <strong>alternance</strong>
+                    (4 jours entreprise / 1 jour formation).
                 </p>
             </div>
         </div>
@@ -73,45 +160,32 @@
 <!-- COMPETENCES -->
 <section id="competences" class="bg-light">
     <div class="container">
-        <h2 class="text-center mb-4">Mes compétences</h2>
-        <div class="row justify-content-center">
-            <!-- Colonne gauche -->
-            <div class="col-md-6 ps-md-5">
-                <h5 class="fw-bold">Langages de programmation</h5>
-                <p>Notions de bases/intermédiaires :</p>
+        <h2 class="text-center mb-4">Compétences</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Langages</h5>
                 <ul>
-                    <li>Python</li>
-                    <li>SQL</li>
-                    <li>HTML, CSS</li>
+                    <li>Python, SQL</li>
+                    <li>HTML / CSS</li>
+                    <li>C#, Luau, GML, Blueprint (bases)</li>
                 </ul>
-                <p>Seulement testés :</p>
+                <h5 class="mt-4">Logiciels</h5>
                 <ul>
-                    <li>C#</li>
-                    <li>Luau</li>
-                    <li>Blueprint (Unreal Engine)</li>
-                    <li>GML Code</li>
-                </ul>
-                <h5 class="fw-bold mt-4">Logiciels</h5>
-                <ul>
-                    <li>VSCode</li>
-                    <li>Excel</li>
-                    <li>Blender</li>
-                    <li>GitHub</li>
+                    <li>VS Code, GitHub</li>
+                    <li>Blender, Excel</li>
                 </ul>
             </div>
-            <!-- Colonne droite -->
-            <div class="col-md-6 ps-md-5">
-                <h5 class="fw-bold">Moteurs de jeux</h5>
+            <div class="col-md-6">
+                <h5>Moteurs de jeu</h5>
                 <ul>
                     <li>Unity</li>
                     <li>Unreal Engine 5</li>
-                    <li>Game Maker Studio 2</li>
-                    <li>Roblox Studio</li>
-                    <li>Construct 3</li>
+                    <li>GameMaker Studio 2</li>
+                    <li>Construct 3, Roblox Studio</li>
                 </ul>
-                <h5 class="fw-bold mt-4">Langues</h5>
+                <h5 class="mt-4">Langues</h5>
                 <ul>
-                    <li>Français (langue maternelle)</li>
+                    <li>Français (natif)</li>
                     <li>Anglais (B1 → B2)</li>
                     <li>Espagnol (A2)</li>
                 </ul>
@@ -119,195 +193,45 @@
         </div>
     </div>
 </section>
-    
-<!-- FORMATIONS -->
-<section id="formations" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Formations</h2>
-
-        <div id="formationsCarousel" class="carousel slide w-100" data-bs-ride="false">
-            <!-- Carousel Inner normal, sans flex pour éviter le bug -->
-            <div class="carousel-inner" style="min-height: 280px;">
-
-                <div class="carousel-item active">
-                    <div class="text-center mx-auto px-3 px-md-5 py-4" style="max-width: 700px;">
-                        <h5 class="fw-bold">Licence Informatique (parcours jeux vidéo)</h5>
-                        <p>
-                        <span class="text-secondary"><strong>CNAM ENJMIN (Angoulème)</strong></span> <br>
-                            Formation sur 3 ans en apprentissage avec 3 mois de mise à niveau en début de première année
-                            (septembre → novembre) et alternance en entreprise au rythme de 4 jours en entreprise
-                            et 1 jour en formation.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="text-center mx-auto px-3 px-md-5 py-4" style="max-width: 700px;">
-                        <h5 class="fw-bold">Baccalauréat général</h5>
-                        <p>
-                            <span class="text-secondary"><strong>Lycée René Char (Avignon)</strong></span> <br>
-                            Préparation à l'obtention du diplôme du baccalauréat général avec spécialités mathématiques et NSI.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="text-center mx-auto px-3 px-md-5 py-4" style="max-width: 700px;">
-                        <h5 class="fw-bold">Diplôme National du Brevet des collèges</h5>
-                        <p>
-                            <span class="text-secondary"><strong>Collège Anne Frank (Morières-lès-Avignon)</strong></span> <br>
-                            Obtention du diplôme du brevet avec mention Très bien (784/800).
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Boutons gris semi-transparents -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#formationsCarousel" data-bs-slide="prev" 
-                    style="background-color: rgba(0, 0, 0, 0.35); width:50px;">
-                <span class="carousel-control-prev-icon" style="filter: invert(1);"></span>
-            </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#formationsCarousel" data-bs-slide="next" 
-                    style="background-color: rgba(0, 0, 0, 0.35); width:50px;">
-                <span class="carousel-control-next-icon" style="filter: invert(1);"></span>
-            </button>
-        </div>
-    </div>
-</section>
-
 
 <!-- PROJETS -->
-<section id="projects" class="bg-light">
+<section id="projects">
     <div class="container">
-        <h2 class="text-center mb-5">Mes projets</h2>
+        <h2 class="text-center mb-5">Projets</h2>
         <div class="row g-4">
-            
-            <!-- PROJET 1 -->
+
+            <!-- Exemple projet -->
             <div class="col-md-4">
                 <div class="card h-100">
-                    <img src="images/Runner3D.png" class="card-img-top" alt="Runner3D Image">
+                    <img src="images/Runner3D.png" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Runner 3D</h5>
                         <p class="card-text">
-                            Jeu réalisé sur <strong>Unity (C#)</strong> pour apprendre à utiliser le moteur dans le cadre du Cours création de jeux vidéos à Digi Activity. <br>
-                            J’ai codé les mouvements du joueur et fait le level design.
+                            Jeu Unity (C#) — déplacements du joueur et level design.
                         </p>
-                        <a href="pages secondaires/Runner3D.html" class="btn btn-outline-primary" target="_blank">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- PROJET 2 -->
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <img src="images/SimpsonsHouseTycoonFin.png" class="card-img-top" alt="Simpsons House Tycoon Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Simpsons House Tycoon</h5>
-                        <p class="card-text">
-                            Jeu réalisé sur Roblox pour m’entrainer au <strong>Luau</strong>. <br>
-                            J’ai codé la gestion de l’appartenance d’un terrain, le système d’argent et l’apparition des éléments et fais les décors.
-                        </p>
-                        <a href="pages secondaires/SimpsonsHouseTycoon.html" class="btn btn-outline-primary" target="_blank">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- PROJET 3 -->
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <img src="images/DungeonExplorer.png" class="card-img-top" alt="Dungeon Explorer Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Dungeon Explorer</h5>
-                        <p class="card-text">
-                            Jeu réalisé sur <strong>Construct 3</strong> pour essayer le moteur de jeu et apprendre à l'utiliser. 
-                            J'ai fait le système de déplacements du joueur, le système d'attaque du joueur et des ennemis, la gestion de la vie du joueur et les conditions de morts, 
-                            et j'ai fait le level design.
-                        </p>
-                        <a href="pages secondaires/DungeonExplorer.html" class="btn btn-outline-primary" target="_blank">Voir le projet</a>
+                        <a href="pages secondaires/Runner3D.html" class="btn btn-outline-primary">Voir le projet</a>
                     </div>
                 </div>
             </div>
 
-            <!-- JUMPING KNIGHT -->
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <img src="images/JumpingKnightMilieu2.png" class="card-img-top" alt="Jumping Knight Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Jumping Knight</h5>
-                        <p class="card-text">
-                            Deuxième jeu réalisé sur <strong>Construct 3</strong> pour essayer le moteur de jeu et apprendre à l'utiliser. 
-                            J'ai fait le système de déplacements du joueur, la gestion de la vie du joueur et les conditions de morts, 
-                            et j'ai fait le level design.
-                        </p>
-                        <a href="pages secondaires/JumpingKnight.html" class="btn btn-outline-primary" target="_blank">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROJET 4 -->
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <img src="images/Labyrinth3D.png" class="card-img-top" alt="Labyrinth3D Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Labyrinth3D</h5>
-                        <p class="card-text">
-                            Jeu réalisé sur <strong>Unreal Engine</strong> pour essayer le moteur de jeu et essayer le <strong>Blueprint</strong>.
-                            J'ai codé le système de déplacements du joueur (marche, sauts, course avec stamina) 
-                            et j'ai ajouté des animations au personnage du joueur correspondant à chacune de ces actions.
-                        </p>
-                        <a href="pages secondaires/Labyrinth3D.html" class="btn btn-outline-primary" target="_blank">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROJET 5 -->
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <img src="images/MastermindPython.png" class="card-img-top" alt="Mastermind Python Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Mastermind Python</h5>
-                        <p class="card-text">
-                            Jeu réalisé en <strong>Python</strong> dans le cadre d'un stage <strong>Digi Activity</strong> pour apprendre ce langage. 
-                            J'ai programmé la génération d'un code aléatoire, le système de choix proposés au joueur et la vérification de la correspondance du code donné par le joueur.
-                        </p>
-                        <a href="pages secondaires/MastermindPython.html" class="btn btn-outline-primary" target="_blank">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROJET 6 -->
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <img src="images/WinterOnTheRampage.png" class="card-img-top" alt="Winter On The Rampage Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Winter On The Rampage</h5>
-                        <p class="card-text">
-                            Jeu réalisé pour la <strong>game jam "Micro Jam 052: Winter"</strong> of January 2026 sur <strong>GameMaker Studio 2</strong>.
-                            J'ai programmé les méchaniques de déplacements, de tir, de déplacements des ennemis et de poursuite du joueur ainsi que les systèmes de vie.
-                        </p>
-                        <a href="pages secondaires/WinterOnTheRampage.html" class="btn btn-outline-primary" target="_blank">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
+            <!-- Tu peux dupliquer ce bloc pour les autres projets -->
 
         </div>
     </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="bg-light">
     <div class="container">
         <h2 class="text-center mb-4">Contact</h2>
-        <div class="row align-items-center justify-content-center">
+        <div class="row justify-content-center align-items-center">
             <div class="col-md-5 text-center">
-                <img src="images/photo CV.png" class="img-fluid rounded mb-5" style="max-width: 80%;">
-                <a href="documents/CV.pdf" class="btn btn-primary" target="_blank">Voir mon CV</a>
+                <img src="images/photo CV.png" class="img-fluid rounded mb-4" style="max-width:70%;">
+                <a href="documents/CV.pdf" class="btn btn-primary">Voir mon CV</a>
             </div>
-            <div class="col-md-5 d-flex flex-column justify-content-evenly text-center">
-                <p>Téléphone : <strong>+33 7 55 67 62 06</strong></p>
-                <p>Email : <strong>tomhacot@gmail.com</strong></p>
+            <div class="col-md-5 text-center">
+                <p>📞 +33 7 55 67 62 06</p>
+                <p>✉️ tomhacot@gmail.com</p>
                 <p>GitHub : <a href="https://github.com/TomH0999">TomH0999</a></p>
                 <p>LinkedIn : <a href="https://www.linkedin.com/in/tom-hacot">tom-hacot</a></p>
                 <p>Itch.io : <a href="https://kantixt.itch.io">KantixT</a></p>
@@ -317,11 +241,10 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">© 2026 - Tom HACOT</p>
+<footer style="background-color:#0a0c11; border-top:1px solid #1f2330;" class="text-center py-4">
+    <p class="mb-0 text-muted">© 2026 · Tom HACOT · Game Developer</p>
 </footer>
-    
-<!-- Bootstrap JS -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
