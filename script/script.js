@@ -11,14 +11,41 @@ const carousel = document.getElementById('formationsCarousel');
 const items = carousel.querySelectorAll('.carousel-item');
 let index = 0;
 
+function showSlide(i) {
+    items.forEach(item => item.classList.remove('active'));
+    items[i].classList.add('active');
+}
+
 document.getElementById('prevFormation').addEventListener('click', () => {
-    items[index].classList.remove('active');
     index = (index - 1 + items.length) % items.length;
-    items[index].classList.add('active');
+    showSlide(index);
 });
 
 document.getElementById('nextFormation').addEventListener('click', () => {
-    items[index].classList.remove('active');
     index = (index + 1) % items.length;
-    items[index].classList.add('active');
+    showSlide(index);
 });
+
+// Fade-in au scroll
+const sections = document.querySelectorAll('section');
+
+function checkVisibleSections() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+
+        if(sectionTop < triggerBottom) {
+            section.classList.add('visible');
+        }
+    });
+}
+
+window.addEventListener('scroll', checkVisibleSections);
+window.addEventListener('load', checkVisibleSections);
+
+// Animation automatique du carousel toutes les 5s
+setInterval(() => {
+    index = (index + 1) % items.length;
+    showSlide(index);
+}, 5000);
