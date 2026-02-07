@@ -203,3 +203,42 @@ footer {
     .navbar-nav.show { display: flex; }
     .about-content, .competences-grid, .contact-grid { flex-direction: column; align-items: center; }
 }
+
+/* IMAGE A PROPOS SPECIALE */
+.unique-about-img {
+    width: 150px; /* taille originale */
+    float: left;
+    margin-right: 50px;
+    border-radius: 10px;
+}
+
+/* IMAGE CV SPECIALE */
+.unique-cv-img {
+    max-width: 80%; /* taille comme avant */
+    border-radius: 10px;
+}
+
+/* BOUTON CV SPECIALE */
+.unique-cv-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+/* CONTACT INFO UNIQUE (centrage comme avant) */
+.unique-contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+/* FOOTER */
+footer.footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    margin-top: 50px;
+}
