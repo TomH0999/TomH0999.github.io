@@ -1,336 +1,247 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio - Tom HACOT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio - Tom HACOT</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #0e1015;
+    --bg-light: #151821;
+    --card: #10131a;
+    --primary: #6c8cff;
+    --secondary: #9aa4ff;
+    --text: #e6e8f0;
+    --muted: #9aa0b3;
+}
 
-    <style>
-        :root {
-            --bg-dark: #0e1015;
-            --bg-light: #151821;
-            --primary: #6c8cff;
-            --secondary: #9aa4ff;
-            --text-light: #e6e8f0;
-            --text-muted: #9aa0b3;
-        }
+[data-theme="light"] {
+    --bg: #f4f6fb;
+    --bg-light: #ffffff;
+    --card: #ffffff;
+    --text: #1c1e26;
+    --muted: #555;
+}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            scroll-behavior: smooth;
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    scroll-behavior: smooth;
+}
 
-        section {
-            padding: 90px 0;
-        }
+section { padding: 90px 0; }
 
-        h1, h2, h3, h4, h5 {
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 0.5px;
-        }
+h1,h2,h3,h4,h5 {
+    font-family: 'Orbitron', sans-serif;
+}
 
-        h2 {
-            color: var(--secondary);
-        }
+h2 { color: var(--secondary); }
 
-        a {
-            color: var(--primary);
-            text-decoration: none;
-        }
+.bg-light { background: var(--bg-light) !important; }
 
-        a:hover {
-            color: var(--secondary);
-        }
+a { color: var(--primary); text-decoration: none; }
+a:hover { color: var(--secondary); }
 
-        .bg-light {
-            background-color: var(--bg-light) !important;
-        }
+.btn-primary {
+    background: linear-gradient(135deg,var(--primary),var(--secondary));
+    border: none;
+}
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border: none;
-            font-weight: 500;
-        }
+.card {
+    background: var(--card);
+    border: 1px solid #1f2330;
+    border-radius: 16px;
+    transition: .3s;
+}
 
-        .btn-outline-primary {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.35);
+}
 
-        .btn-outline-primary:hover {
-            background-color: var(--primary);
-            color: #fff;
-        }
+.card-title { color: var(--secondary); }
+.card-text { color: var(--muted); font-size:.95rem; }
 
-        /* Cards projets */
-        .card {
-            background-color: #10131a;
-            border: 1px solid #1f2330;
-            border-radius: 16px;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
+.fade-in {
+    opacity:0;
+    transform: translateY(30px);
+    transition: .8s ease;
+}
 
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-        }
-
-        .card-title {
-            color: var(--secondary);
-        }
-
-        .card-text {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .card img {
-            border-radius: 16px 16px 0 0;
-        }
-
-        ul li {
-            margin-bottom: 6px;
-            color: var(--text-muted);
-        }
-    </style>
+.fade-in.visible {
+    opacity:1;
+    transform:none;
+}
+</style>
 </head>
 
-<body>
+<body data-theme="dark">
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#0e1015; border-bottom:1px solid #1f2330;">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Tom HACOT</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
-                <li class="nav-item"><a class="nav-link" href="#formations">Formations</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background:#0e1015;border-bottom:1px solid #1f2330;">
+<div class="container">
+<a class="navbar-brand fw-bold" href="#">Tom HACOT</a>
+
+<button class="btn btn-sm btn-outline-light ms-auto me-3" onclick="toggleTheme()">🌙 / ☀️</button>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+<li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+<li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+</div>
+</div>
 </nav>
 
 <!-- HERO -->
-<header class="text-center" style="padding-top:160px; padding-bottom:120px; background: radial-gradient(circle at top, #1c2040, #0e1015);">
-    <div class="container">
-        <h1 class="display-4 fw-bold">Tom HACOT</h1>
-        <p class="lead text-muted">Futur Game Developer</p>
-        <a href="#projects" class="btn btn-primary btn-lg mt-3">Voir mes projets</a>
-    </div>
+<header class="text-center fade-in" style="padding:160px 0;background:radial-gradient(circle at top,#1c2040,#0e1015);">
+<div class="container">
+<h1 class="display-4 fw-bold">Tom HACOT</h1>
+<p class="lead text-muted">Game Developer · Programmer</p>
+<a href="#projects" class="btn btn-primary btn-lg mt-3">Voir mes projets</a>
+</div>
 </header>
-
-<!-- A PROPOS -->
-<section id="about">
-    <div class="container">
-        <h2 class="text-center mb-4">À propos de moi</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <img src="images/photo Tom.jpg" alt="photo" width="150" class="rounded float-start me-4 mb-3">
-                <p>
-                    Je suis <strong>Tom</strong>, j'ai <strong>17 ans</strong>, passionné de jeux vidéo et de leur création.
-                    J’ai choisi de faire une <strong>licence informatique parcours jeu vidéo</strong> au
-                    <strong>CNAM ENJMIN</strong> d’Angoulême en <strong>programmation</strong>.
-                </p>
-                <p>
-                    Cette formation étant en apprentissage, je recherche une entreprise pour une
-                    <strong>alternance</strong> à un rythme de <strong>4 jours en entreprise / 1 jour en formation</strong>.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- COMPETENCES -->
-<section id="competences" class="bg-light">
-    <div class="container">
-        <h2 class="text-center mb-4">Mes compétences</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <h5>Langages de programmation</h5>
-                <ul>
-                    <li>Python, SQL</li>
-                    <li>HTML, CSS</li>
-                    <li>C#, Luau, GML, Blueprint (bases)</li>
-                </ul>
-                <h5 class="mt-4">Logiciels</h5>
-                <ul>
-                    <li>VSCode, GitHub</li>
-                    <li>Excel, Blender</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h5>Moteurs de jeux</h5>
-                <ul>
-                    <li>Unity</li>
-                    <li>Unreal Engine 5</li>
-                    <li>GameMaker Studio 2</li>
-                    <li>Roblox Studio, Construct 3</li>
-                </ul>
-                <h5 class="mt-4">Langues</h5>
-                <ul>
-                    <li>Français (langue maternelle)</li>
-                    <li>Anglais (B1 → B2)</li>
-                    <li>Espagnol (A2)</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- PROJETS -->
 <section id="projects">
-    <div class="container">
-        <h2 class="text-center mb-5">Mes projets</h2>
-        <div class="row g-4">
+<div class="container">
+<h2 class="text-center mb-5 fade-in">Projets</h2>
+<div class="row g-4">
 
-            <!-- Runner 3D -->
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <img src="images/Runner3D.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Runner 3D</h5>
-                        <p class="card-text">
-                            Jeu réalisé sur <strong>Unity (C#)</strong>.
-                            J’ai codé les mouvements du joueur et réalisé le level design.
-                        </p>
-                        <a href="pages secondaires/Runner3D.html" class="btn btn-outline-primary" target="_blank">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
+<!-- Winter On The Rampage -->
+<div class="col-md-4 fade-in">
+<div class="card h-100">
+<img src="images/WinterOnTheRampage.png" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Winter On The Rampage</h5>
+<p class="card-text">GameMaker Studio 2 – Micro Jam 052 (2026)</p>
+<a href="pages secondaires/WinterOnTheRampage.html" target="_blank" class="btn btn-outline-primary">Voir le projet</a>
+</div>
+</div>
+</div>
 
-            <!-- Simpsons House Tycoon -->
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <img src="images/SimpsonsHouseTycoonFin.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Simpsons House Tycoon</h5>
-                        <p class="card-text">
-                            Jeu Roblox pour m’entraîner au <strong>Luau</strong>.
-                            Gestion de terrain, argent et apparition des éléments.
-                        </p>
-                        <a href="pages secondaires/SimpsonsHouseTycoon.html" class="btn btn-outline-primary" target="_blank">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
+<!-- Labyrinth 3D -->
+<div class="col-md-4 fade-in">
+<div class="card h-100">
+<img src="images/Labyrinth3D.png" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Labyrinth 3D</h5>
+<p class="card-text">Unreal Engine – Blueprint</p>
+<a href="pages secondaires/Labyrinth3D.html" target="_blank" class="btn btn-outline-primary">Voir le projet</a>
+</div>
+</div>
+</div>
 
-            <!-- Dungeon Explorer -->
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <img src="images/DungeonExplorer.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Dungeon Explorer</h5>
-                        <p class="card-text">
-                            Jeu sur <strong>Construct 3</strong>.
-                            Déplacements, combats, vie, conditions de mort et level design.
-                        </p>
-                        <a href="pages secondaires/DungeonExplorer.html" class="btn btn-outline-primary" target="_blank">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
+<!-- Simpsons -->
+<div class="col-md-4 fade-in">
+<div class="card h-100">
+<img src="images/SimpsonsHouseTycoonFin.png" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Simpsons House Tycoon</h5>
+<p class="card-text">Roblox – Luau</p>
+<a href="pages secondaires/SimpsonsHouseTycoon.html" target="_blank" class="btn btn-outline-primary">Voir le projet</a>
+</div>
+</div>
+</div>
 
-            <!-- Jumping Knight -->
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <img src="images/JumpingKnightMilieu2.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Jumping Knight</h5>
-                        <p class="card-text">
-                            Deuxième jeu sur <strong>Construct 3</strong>.
-                            Déplacements, gestion de la vie et level design.
-                        </p>
-                        <a href="pages secondaires/JumpingKnight.html" class="btn btn-outline-primary" target="_blank">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
+<!-- Runner 3D -->
+<div class="col-md-4 fade-in">
+<div class="card h-100">
+<img src="images/Runner3D.png" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Runner 3D</h5>
+<p class="card-text">Unity (C#)</p>
+<a href="pages secondaires/Runner3D.html" target="_blank" class="btn btn-outline-primary">Voir le projet</a>
+</div>
+</div>
+</div>
 
-            <!-- Labyrinth 3D -->
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <img src="images/Labyrinth3D.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Labyrinth 3D</h5>
-                        <p class="card-text">
-                            Jeu Unreal Engine (Blueprint).
-                            Déplacements, sauts, course avec stamina et animations.
-                        </p>
-                        <a href="pages secondaires/Labyrinth3D.html" class="btn btn-outline-primary" target="_blank">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
+<!-- Dungeon Explorer -->
+<div class="col-md-4 fade-in">
+<div class="card h-100">
+<img src="images/DungeonExplorer.png" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Dungeon Explorer</h5>
+<p class="card-text">Construct 3</p>
+<a href="pages secondaires/DungeonExplorer.html" target="_blank" class="btn btn-outline-primary">Voir le projet</a>
+</div>
+</div>
+</div>
 
-            <!-- Mastermind Python -->
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <img src="images/MastermindPython.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Mastermind Python</h5>
-                        <p class="card-text">
-                            Jeu en <strong>Python</strong>.
-                            Génération aléatoire et vérification du code joueur.
-                        </p>
-                        <a href="pages secondaires/MastermindPython.html" class="btn btn-outline-primary" target="_blank">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
+<!-- Jumping Knight -->
+<div class="col-md-4 fade-in">
+<div class="card h-100">
+<img src="images/JumpingKnightMilieu2.png" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Jumping Knight</h5>
+<p class="card-text">Construct 3</p>
+<a href="pages secondaires/JumpingKnight.html" target="_blank" class="btn btn-outline-primary">Voir le projet</a>
+</div>
+</div>
+</div>
 
-            <!-- Winter On The Rampage -->
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <img src="images/WinterOnTheRampage.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Winter On The Rampage</h5>
-                        <p class="card-text">
-                            Jeu pour la <strong>Micro Jam 052: Winter</strong> (janvier 2026)
-                            sur <strong>GameMaker Studio 2</strong>.
-                        </p>
-                        <a href="pages secondaires/WinterOnTheRampage.html" class="btn btn-outline-primary" target="_blank">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
+<!-- Mastermind -->
+<div class="col-md-4 fade-in">
+<div class="card h-100">
+<img src="images/MastermindPython.png" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Mastermind Python</h5>
+<p class="card-text">Python</p>
+<a href="pages secondaires/MastermindPython.html" target="_blank" class="btn btn-outline-primary">Voir le projet</a>
+</div>
+</div>
+</div>
 
-        </div>
-    </div>
+</div>
+</div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="bg-light">
-    <div class="container">
-        <h2 class="text-center mb-4">Contact</h2>
-        <div class="row align-items-center justify-content-center">
-            <div class="col-md-5 text-center">
-                <img src="images/photo CV.png" class="img-fluid rounded mb-5" style="max-width:80%;">
-                <a href="documents/CV.pdf" class="btn btn-primary" target="_blank">Voir mon CV</a>
-            </div>
-            <div class="col-md-5 text-center">
-                <p>Téléphone : <strong>+33 7 55 67 62 06</strong></p>
-                <p>Email : <strong>tomhacot@gmail.com</strong></p>
-                <p>GitHub : <a href="https://github.com/TomH0999">TomH0999</a></p>
-                <p>LinkedIn : <a href="https://www.linkedin.com/in/tom-hacot">tom-hacot</a></p>
-                <p>Itch.io : <a href="https://kantixt.itch.io">KantixT</a></p>
-            </div>
-        </div>
-    </div>
+<section id="contact" class="bg-light fade-in">
+<div class="container text-center">
+<h2 class="mb-4">Contact</h2>
+<img src="images/photo CV.png" class="img-fluid rounded mb-4" style="max-width:200px">
+<p><strong>📞</strong> +33 7 55 67 62 06</p>
+<p><strong>✉️</strong> tomhacot@gmail.com</p>
+<p><a href="documents/CV.pdf" target="_blank" class="btn btn-primary mt-2">Voir mon CV</a></p>
+</div>
 </section>
 
-<!-- FOOTER -->
-<footer style="background-color:#0a0c11; border-top:1px solid #1f2330;" class="text-center py-4">
-    <p class="mb-0 text-muted">© 2026 · Tom HACOT · Game Developer</p>
+<footer class="text-center py-4" style="border-top:1px solid #1f2330;">
+<p class="text-muted mb-0">© 2026 · Tom HACOT · Game Developer</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting) e.target.classList.add("visible");
+});
+});
+document.querySelectorAll(".fade-in").forEach(el=>observer.observe(el));
+
+function toggleTheme(){
+const body=document.body;
+const theme=body.getAttribute("data-theme")==="dark"?"light":"dark";
+body.setAttribute("data-theme",theme);
+localStorage.setItem("theme",theme);
+}
+if(localStorage.getItem("theme")){
+document.body.setAttribute("data-theme",localStorage.getItem("theme"));
+}
+</script>
+
 </body>
 </html>
