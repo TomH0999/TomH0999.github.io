@@ -12,7 +12,6 @@ body {
     line-height: 1.6;
 }
 
-/* Container général pour centrer et marges */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -95,6 +94,7 @@ body {
 
 .btn-primary:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 20px #00FFFF;
     background-color: #00BFBF;
 }
 
@@ -113,7 +113,7 @@ section.visible {
     transform: translateY(0);
 }
 
-/* A PROPOS */
+/* ABOUT */
 #about .about-content {
     display: flex;
     flex-wrap: wrap;
@@ -245,22 +245,45 @@ section.visible {
     box-shadow: 0 0 30px #00FFFF;
 }
 
-/* CONTACT */
-.contact-grid {
+/* CONTACT améliorée */
+.contact-grid-improved {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
     justify-content: center;
+    gap: 3rem;
+    background-color: #1A1A1A;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #00FFFF;
+    box-shadow: 0 0 20px #00FFFF20;
 }
 
-.contact-img {
-    width: 250px;
+.contact-left, .contact-right {
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-left img {
+    width: 220px;
     border-radius: 12px;
+    margin-bottom: 1rem;
     border: 2px solid #00FFFF;
 }
 
-.contact-info p {
-    margin-bottom: 0.5rem;
+.contact-right p {
+    margin-bottom: 0.7rem;
+}
+
+.contact-right a {
+    color: #00FFFF;
+    text-decoration: none;
+}
+
+.contact-right a:hover {
+    text-decoration: underline;
 }
 
 /* FOOTER */
@@ -304,7 +327,7 @@ section.visible {
         align-items: center;
     }
 
-    .contact-grid {
+    .contact-grid-improved {
         flex-direction: column;
         align-items: center;
     }
