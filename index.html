@@ -5,72 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio - Tom HACOT</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Style perso -->
+    <!-- CSS perso -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar">
     <div class="container">
         <a class="navbar-brand" href="#">Tom HACOT</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
-                <li class="nav-item"><a class="nav-link" href="#formations">Formations</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </div>
+        <button class="navbar-toggler" id="navbar-toggler">☰</button>
+        <ul class="navbar-nav" id="navbar-nav">
+            <li><a class="nav-link" href="#about">À propos</a></li>
+            <li><a class="nav-link" href="#competences">Compétences</a></li>
+            <li><a class="nav-link" href="#formations">Formations</a></li>
+            <li><a class="nav-link" href="#projects">Projets</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
     </div>
 </nav>
 
 <!-- HERO -->
-<header class="bg-light text-center" style="padding-top:120px; padding-bottom:80px;">
-    <div class="container">
-        <h1 class="display-4">Tom HACOT</h1>
+<header class="hero">
+    <div class="container text-center">
+        <h1>Tom HACOT</h1>
         <p class="lead">Futur Game Developper</p>
-        <a href="#projects" class="btn btn-primary btn-lg">Voir mes projets</a>
+        <a href="#projects" class="btn btn-primary">Voir mes projets</a>
     </div>
 </header>
 
 <!-- A PROPOS -->
 <section id="about">
     <div class="container">
-        <h2 class="text-center mb-4">À propos de moi</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
-                <img src="images/photo Tom.jpg" alt="image" width="150" class="img-fluid rounded">
-                <p>
-                    Je suis <strong>Tom</strong>, j'ai <strong>17 ans</strong>, je suis passionné de jeux vidéo depuis toujours et depuis quelques années, je m'intéresse beaucoup à leur création.
-                    J'ai ainsi décidé de faire de cette passion mon métier et j'ai choisi de faire une <strong>licence informatique parcours jeu vidéo</strong> au <strong>CNAM ENJMIN</strong> d'Angoulème en <strong>programmation</strong>.
-                </p>
-                <p>
-                    Cette formation étant en apprentissage:
-                </p>
-                <p>
-                    Je cherche une entreprise pour effectuer une <strong>alternance</strong> à un rythme de <strong>4 jours en entreprise/1 jour en formation</strong>.
-                </p>
+        <h2 class="text-center">À propos de moi</h2>
+        <div class="about-content">
+            <img src="images/photo Tom.jpg" alt="photo Tom" class="about-img">
+            <div>
+                <p>Je suis <strong>Tom</strong>, j'ai <strong>17 ans</strong>, je suis passionné de jeux vidéo depuis toujours et depuis quelques années, je m'intéresse beaucoup à leur création. J'ai ainsi décidé de faire de cette passion mon métier et j'ai choisi de faire une <strong>licence informatique parcours jeu vidéo</strong> au <strong>CNAM ENJMIN</strong> d'Angoulème en <strong>programmation</strong>.</p>
+                <p>Cette formation étant en apprentissage :</p>
+                <p>Je cherche une entreprise pour effectuer une <strong>alternance</strong> à un rythme de <strong>4 jours en entreprise/1 jour en formation</strong>.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- COMPETENCES -->
-<section id="competences" class="bg-light">
+<section id="competences">
     <div class="container">
-        <h2 class="text-center mb-4">Mes compétences</h2>
-        <div class="row justify-content-center">
-            <!-- Colonne gauche -->
-            <div class="col-md-6 ps-md-5">
-                <h5 class="fw-bold">Langages de programmation</h5>
+        <h2 class="text-center">Mes compétences</h2>
+        <div class="competences-grid">
+            <div>
+                <h5>Langages de programmation</h5>
                 <p>Notions de bases/intermédiaires :</p>
                 <ul>
                     <li>Python</li>
@@ -84,7 +69,7 @@
                     <li>Blueprint (Unreal Engine)</li>
                     <li>GML Code</li>
                 </ul>
-                <h5 class="fw-bold mt-4">Logiciels</h5>
+                <h5>Logiciels</h5>
                 <ul>
                     <li>VSCode</li>
                     <li>Excel</li>
@@ -92,9 +77,8 @@
                     <li>GitHub</li>
                 </ul>
             </div>
-            <!-- Colonne droite -->
-            <div class="col-md-6 ps-md-5">
-                <h5 class="fw-bold">Moteurs de jeux</h5>
+            <div>
+                <h5>Moteurs de jeux</h5>
                 <ul>
                     <li>Unity</li>
                     <li>Unreal Engine 5</li>
@@ -102,7 +86,7 @@
                     <li>Roblox Studio</li>
                     <li>Construct 3</li>
                 </ul>
-                <h5 class="fw-bold mt-4">Langues</h5>
+                <h5>Langues</h5>
                 <ul>
                     <li>Français (langue maternelle)</li>
                     <li>Anglais (B1 → B2)</li>
@@ -114,100 +98,87 @@
 </section>
 
 <!-- FORMATIONS -->
-<section id="formations" class="py-5">
+<section id="formations">
     <div class="container">
-        <h2 class="text-center mb-4">Formations</h2>
-
-        <div id="formationsCarousel" class="carousel slide w-100" data-bs-ride="false">
-            <!-- Carousel Inner -->
-            <div class="carousel-inner" style="min-height: 280px;">
-
+        <h2 class="text-center">Formations</h2>
+        <div class="carousel" id="formationsCarousel">
+            <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="text-center mx-auto px-3 px-md-5 py-4" style="max-width: 700px;">
-                        <h5 class="fw-bold">Licence Informatique (parcours jeux vidéo)</h5>
-                        <p>
-                            <span class="text-secondary"><strong>CNAM ENJMIN (Angoulème)</strong></span> <br>
-                            Formation sur 3 ans en apprentissage avec 3 mois de mise à niveau en début de première année
-                            (septembre → novembre) et alternance en entreprise au rythme de 4 jours en entreprise
-                            et 1 jour en formation.
-                        </p>
-                    </div>
+                    <h5>Licence Informatique (parcours jeux vidéo)</h5>
+                    <p><strong>CNAM ENJMIN (Angoulème)</strong><br>
+                    Formation sur 3 ans en apprentissage avec 3 mois de mise à niveau et alternance en entreprise au rythme de 4 jours/1 jour.</p>
                 </div>
-
                 <div class="carousel-item">
-                    <div class="text-center mx-auto px-3 px-md-5 py-4" style="max-width: 700px;">
-                        <h5 class="fw-bold">Baccalauréat général</h5>
-                        <p>
-                            <span class="text-secondary"><strong>Lycée René Char (Avignon)</strong></span> <br>
-                            Préparation à l'obtention du diplôme du baccalauréat général avec spécialités mathématiques et NSI.
-                        </p>
-                    </div>
+                    <h5>Baccalauréat général</h5>
+                    <p><strong>Lycée René Char (Avignon)</strong><br>
+                    Préparation à l'obtention du diplôme du baccalauréat général avec spécialités mathématiques et NSI.</p>
                 </div>
-
                 <div class="carousel-item">
-                    <div class="text-center mx-auto px-3 px-md-5 py-4" style="max-width: 700px;">
-                        <h5 class="fw-bold">Diplôme National du Brevet des collèges</h5>
-                        <p>
-                            <span class="text-secondary"><strong>Collège Anne Frank (Morières-lès-Avignon)</strong></span> <br>
-                            Obtention du diplôme du brevet avec mention Très bien (784/800).
-                        </p>
-                    </div>
+                    <h5>Diplôme National du Brevet</h5>
+                    <p><strong>Collège Anne Frank (Morières-lès-Avignon)</strong><br>
+                    Obtention du diplôme du brevet avec mention Très bien (784/800).</p>
                 </div>
-
             </div>
-
-            <!-- Boutons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#formationsCarousel" data-bs-slide="prev" 
-                    style="background-color: rgba(0, 0, 0, 0.35); width:50px;">
-                <span class="carousel-control-prev-icon" style="filter: invert(1);"></span>
-            </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#formationsCarousel" data-bs-slide="next" 
-                    style="background-color: rgba(0, 0, 0, 0.35); width:50px;">
-                <span class="carousel-control-next-icon" style="filter: invert(1);"></span>
-            </button>
+            <button class="carousel-control prev" id="prevFormation">‹</button>
+            <button class="carousel-control next" id="nextFormation">›</button>
         </div>
     </div>
 </section>
 
 <!-- PROJETS -->
-<section id="projects" class="bg-light">
+<section id="projects">
     <div class="container">
-        <h2 class="text-center mb-5">Mes projets</h2>
-        <div class="row g-4">
-            <!-- Tous les projets ici (identiques à ton code actuel) -->
-            <!-- Projet 1 à Projet 6 -->
-            <!-- ... ton code des cards reste inchangé ... -->
+        <h2 class="text-center">Mes projets</h2>
+        <div class="projects-grid">
+
+            <!-- Projet Card -->
+            <div class="card">
+                <img src="images/Runner3D.png" alt="Runner3D">
+                <div class="card-body">
+                    <h5>Runner 3D</h5>
+                    <p>Jeu réalisé sur <strong>Unity (C#)</strong> ...</p>
+                    <a href="pages secondaires/Runner3D.html" target="_blank">Voir le projet</a>
+                </div>
+            </div>
+
+            <!-- Tous les autres projets suivent le même modèle -->
+            <div class="card">
+                <img src="images/SimpsonsHouseTycoonFin.png" alt="Simpsons House Tycoon">
+                <div class="card-body">
+                    <h5>Simpsons House Tycoon</h5>
+                    <p>Jeu réalisé sur Roblox ...</p>
+                    <a href="pages secondaires/SimpsonsHouseTycoon.html" target="_blank">Voir le projet</a>
+                </div>
+            </div>
+
+            <!-- Continue pour les autres projets (Dungeon Explorer, Jumping Knight, etc.) -->
         </div>
     </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-    <div class="container">
-        <h2 class="text-center mb-4">Contact</h2>
-        <div class="row align-items-center justify-content-center">
-            <div class="col-md-5 text-center">
-                <img src="images/photo CV.png" class="img-fluid rounded mb-5" style="max-width: 80%;">
-                <a href="documents/CV.pdf" class="btn btn-primary" target="_blank">Voir mon CV</a>
-            </div>
-            <div class="col-md-5 d-flex flex-column justify-content-evenly text-center">
-                <p>Téléphone : <strong>+33 7 55 67 62 06</strong></p>
-                <p>Email : <strong>tomhacot@gmail.com</strong></p>
-                <p>GitHub : <a href="https://github.com/TomH0999">TomH0999</a></p>
-                <p>LinkedIn : <a href="https://www.linkedin.com/in/tom-hacot">tom-hacot</a></p>
-                <p>Itch.io : <a href="https://kantixt.itch.io">KantixT</a></p>
-            </div>
+    <div class="container contact-grid">
+        <div>
+            <img src="images/photo CV.png" alt="CV Tom" class="contact-img">
+            <a href="documents/CV.pdf" target="_blank" class="btn btn-primary">Voir mon CV</a>
+        </div>
+        <div class="contact-info">
+            <p>Téléphone : <strong>+33 7 55 67 62 06</strong></p>
+            <p>Email : <strong>tomhacot@gmail.com</strong></p>
+            <p>GitHub : <a href="https://github.com/TomH0999">TomH0999</a></p>
+            <p>LinkedIn : <a href="https://www.linkedin.com/in/tom-hacot">tom-hacot</a></p>
+            <p>Itch.io : <a href="https://kantixt.itch.io">KantixT</a></p>
         </div>
     </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">© 2026 - Tom HACOT</p>
+<footer>
+    <p>© 2026 - Tom HACOT</p>
 </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JS perso -->
+<script src="script.js"></script>
 </body>
 </html>
