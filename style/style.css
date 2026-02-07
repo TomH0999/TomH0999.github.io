@@ -1,4 +1,6 @@
-/* Reset & base */
+/* ===========================
+   RESET & BASE
+=========================== */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +20,9 @@ body {
     padding: 0 1.5rem;
 }
 
-/* NAVBAR */
+/* ===========================
+   NAVBAR
+=========================== */
 .navbar {
     background-color: #1E1E1E;
     padding: 1rem;
@@ -62,12 +66,20 @@ body {
     cursor: pointer;
 }
 
-/* HERO */
+/* ===========================
+   HERO
+=========================== */
 .hero {
     background: linear-gradient(135deg, #0F0F0F, #1A1A1A);
     text-align: center;
     padding: 6rem 1rem;
     margin-bottom: 4rem;
+}
+
+.hero-small {
+    padding: 4rem 1rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #0F0F0F, #1A1A1A);
 }
 
 .hero h1 {
@@ -82,6 +94,9 @@ body {
     margin-bottom: 2rem;
 }
 
+/* ===========================
+   BUTTONS
+=========================== */
 .btn-primary {
     background-color: #00FFFF;
     color: #121212;
@@ -98,7 +113,20 @@ body {
     background-color: #00BFBF;
 }
 
-/* SECTIONS */
+.btn-outline-secondary {
+    border-color: #00FFFF;
+    color: #00FFFF;
+    border-radius: 8px;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #00FFFF;
+    color: #121212;
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
 section {
     padding: 4rem 0;
     border-top: 1px solid #222;
@@ -113,7 +141,9 @@ section.visible {
     transform: translateY(0);
 }
 
-/* ABOUT */
+/* ===========================
+   ABOUT
+=========================== */
 #about .about-content {
     display: flex;
     flex-wrap: wrap;
@@ -132,7 +162,9 @@ section.visible {
     flex: 1;
 }
 
-/* COMPETENCES */
+/* ===========================
+   COMPETENCES
+=========================== */
 .competences-grid {
     display: flex;
     flex-wrap: wrap;
@@ -140,14 +172,39 @@ section.visible {
     justify-content: center;
 }
 
-.competences-grid div {
+.competence-block {
     background-color: #1E1E1E;
     padding: 1.5rem;
     border-radius: 12px;
-    flex: 1 1 300px;
+    flex: 1 1 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #00FFFF;
 }
 
-/* FORMATIONS */
+.competence-block h5 {
+    color: #00FFFF;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.competence-block ul {
+    list-style: disc inside;
+    line-height: 1.6;
+}
+
+.competence-block li {
+    margin-bottom: 0.4rem;
+}
+
+.competence-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #00FFFF;
+}
+
+/* ===========================
+   FORMATIONS CAROUSEL
+=========================== */
 .carousel {
     position: relative;
     background-color: #1E1E1E;
@@ -192,7 +249,9 @@ section.visible {
     right: -10px;
 }
 
-/* PROJETS */
+/* ===========================
+   PROJETS
+=========================== */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -245,7 +304,9 @@ section.visible {
     box-shadow: 0 0 30px #00FFFF;
 }
 
-/* CONTACT améliorée */
+/* ===========================
+   CONTACT
+=========================== */
 .contact-grid-improved {
     display: flex;
     flex-wrap: wrap;
@@ -286,7 +347,51 @@ section.visible {
     text-decoration: underline;
 }
 
-/* FOOTER */
+/* ===========================
+   PAGES PROJETS
+=========================== */
+.img-project {
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid #00FFFF;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.img-project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00FFFF;
+}
+
+.project-info h3 {
+    color: #00FFFF;
+    margin-bottom: 1rem;
+}
+
+.project-list {
+    list-style: disc inside;
+    line-height: 1.6;
+    padding-left: 0;
+}
+
+.project-list li {
+    background-color: #1E1E1E;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    border: 1px solid #00FFFF;
+}
+
+.bg-section {
+    background-color: #1A1A1A;
+    padding: 3rem 0;
+    border-radius: 12px;
+    border: 2px solid #00FFFF;
+    margin-top: 2rem;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
 .footer {
     text-align: center;
     padding: 2rem 1rem;
@@ -295,7 +400,9 @@ section.visible {
     border-top: 2px solid #00FFFF;
 }
 
-/* Responsive */
+/* ===========================
+   RESPONSIVE
+=========================== */
 @media(max-width: 768px){
     .navbar-nav {
         display: none;
@@ -317,22 +424,21 @@ section.visible {
         display: flex;
     }
 
-    #about .about-content {
+    #about .about-content,
+    .row.g-5 {
         flex-direction: column;
         align-items: center;
     }
 
-    .competences-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
+    .competences-grid,
     .contact-grid-improved {
         flex-direction: column;
         align-items: center;
     }
 
-    .carousel {
-        padding: 2rem;
+    .competence-block,
+    .contact-left,
+    .contact-right {
+        width: 90%;
     }
 }
