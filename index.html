@@ -28,23 +28,36 @@
             scroll-behavior: smooth;
         }
 
-        section { padding: 90px 0; }
+        section {
+            padding: 90px 0;
+        }
 
         h1, h2, h3, h4, h5 {
             font-family: 'Orbitron', sans-serif;
             letter-spacing: 0.5px;
         }
 
-        h2 { color: var(--secondary); }
+        h2 {
+            color: var(--secondary);
+        }
 
-        a { color: var(--primary); text-decoration: none; }
-        a:hover { color: var(--secondary); }
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
 
-        .bg-light { background-color: var(--bg-light) !important; }
+        a:hover {
+            color: var(--secondary);
+        }
+
+        .bg-light {
+            background-color: var(--bg-light) !important;
+        }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             border: none;
+            font-weight: 500;
         }
 
         .btn-outline-primary {
@@ -62,27 +75,30 @@
             background-color: #10131a;
             border: 1px solid #1f2330;
             border-radius: 16px;
-            transition: transform .3s ease, box-shadow .3s ease;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
         .card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 15px 40px rgba(0,0,0,.4);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
         }
 
-        .card-title { color: var(--secondary); }
-        .card-text { color: var(--text-muted); }
-
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: .8s ease;
+        .card-title {
+            color: var(--secondary);
         }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: none;
+        .card-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .card img {
+            border-radius: 16px 16px 0 0;
+        }
+
+        ul li {
+            margin-bottom: 6px;
+            color: var(--text-muted);
         }
     </style>
 </head>
@@ -90,14 +106,12 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background:#0e1015;border-bottom:1px solid #1f2330;">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#0e1015; border-bottom:1px solid #1f2330;">
     <div class="container">
         <a class="navbar-brand fw-bold" href="#">Tom HACOT</a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
@@ -111,38 +125,126 @@
 </nav>
 
 <!-- HERO -->
-<header class="text-center fade-in" style="padding-top:160px;padding-bottom:120px;background:radial-gradient(circle at top,#1c2040,#0e1015);">
+<header class="text-center" style="padding-top:160px; padding-bottom:120px; background: radial-gradient(circle at top, #1c2040, #0e1015);">
     <div class="container">
         <h1 class="display-4 fw-bold">Tom HACOT</h1>
-        <p class="lead text-muted">Futur Game Developer</p>
+        <p class="lead text-muted">Game Developer · Programmer</p>
         <a href="#projects" class="btn btn-primary btn-lg mt-3">Voir mes projets</a>
     </div>
 </header>
 
-<!-- ANIMATIONS SECTIONS -->
-<section id="about" class="fade-in">
-<section id="competences" class="bg-light fade-in">
-<section id="projects" class="fade-in">
-<section id="contact" class="bg-light fade-in">
+<!-- A PROPOS -->
+<section id="about">
+    <div class="container">
+        <h2 class="text-center mb-4">À propos de moi</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <img src="images/photo Tom.jpg" width="150" class="rounded float-start me-4 mb-3">
+                <p>
+                    Je suis <strong>Tom</strong>, 17 ans, passionné de jeux vidéo et de leur création.
+                    Mon objectif est de devenir <strong>game developer</strong>, spécialisé en programmation.
+                </p>
+                <p>
+                    J’ai choisi une <strong>licence informatique parcours jeu vidéo</strong> au
+                    <strong>CNAM ENJMIN</strong> d’Angoulême, en apprentissage.
+                </p>
+                <p>
+                    Je recherche une entreprise pour une <strong>alternance</strong>
+                    (4 jours entreprise / 1 jour formation).
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPETENCES -->
+<section id="competences" class="bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Compétences</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Langages</h5>
+                <ul>
+                    <li>Python, SQL</li>
+                    <li>HTML / CSS</li>
+                    <li>C#, Luau, GML, Blueprint (bases)</li>
+                </ul>
+                <h5 class="mt-4">Logiciels</h5>
+                <ul>
+                    <li>VS Code, GitHub</li>
+                    <li>Blender, Excel</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h5>Moteurs de jeu</h5>
+                <ul>
+                    <li>Unity</li>
+                    <li>Unreal Engine 5</li>
+                    <li>GameMaker Studio 2</li>
+                    <li>Construct 3, Roblox Studio</li>
+                </ul>
+                <h5 class="mt-4">Langues</h5>
+                <ul>
+                    <li>Français (natif)</li>
+                    <li>Anglais (B1 → B2)</li>
+                    <li>Espagnol (A2)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJETS -->
+<section id="projects">
+    <div class="container">
+        <h2 class="text-center mb-5">Projets</h2>
+        <div class="row g-4">
+
+            <!-- Exemple projet -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="images/Runner3D.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Runner 3D</h5>
+                        <p class="card-text">
+                            Jeu Unity (C#) — déplacements du joueur et level design.
+                        </p>
+                        <a href="pages secondaires/Runner3D.html" class="btn btn-outline-primary">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tu peux dupliquer ce bloc pour les autres projets -->
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Contact</h2>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-5 text-center">
+                <img src="images/photo CV.png" class="img-fluid rounded mb-4" style="max-width:70%;">
+                <a href="documents/CV.pdf" class="btn btn-primary">Voir mon CV</a>
+            </div>
+            <div class="col-md-5 text-center">
+                <p>📞 +33 7 55 67 62 06</p>
+                <p>✉️ tomhacot@gmail.com</p>
+                <p>GitHub : <a href="https://github.com/TomH0999">TomH0999</a></p>
+                <p>LinkedIn : <a href="https://www.linkedin.com/in/tom-hacot">tom-hacot</a></p>
+                <p>Itch.io : <a href="https://kantixt.itch.io">KantixT</a></p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- FOOTER -->
-<footer style="background-color:#0a0c11;border-top:1px solid #1f2330;" class="text-center py-4 fade-in">
+<footer style="background-color:#0a0c11; border-top:1px solid #1f2330;" class="text-center py-4">
     <p class="mb-0 text-muted">© 2026 · Tom HACOT · Game Developer</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-/* Animation scroll */
-const observer = new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add("visible");
-        }
-    });
-});
-document.querySelectorAll(".fade-in").forEach(el=>observer.observe(el));
-</script>
-
 </body>
 </html>
