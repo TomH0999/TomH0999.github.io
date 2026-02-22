@@ -1,127 +1,152 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jumping Knight - Portfolio</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS perso -->
+    <link rel="stylesheet" href="../style/style.css">
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="../index.html">Tom HACOT</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="../index.html#projects">Projets</a></li>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Tom HACOT</a>
+            <button class="navbar-toggler" id="navbar-toggler">☰</button>
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a class="nav-link" href="../index.html">Accueil</a></li>
+                <li><a class="nav-link" href="../index.html#projects">Projets</a></li>
             </ul>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- HEADER PROJET -->
-<header class="bg-light py-5">
-    <div class="container">
-        <h1 class="display-5">Jumping Knight</h1>
-        <p class="lead">Jeu vidéo / Projet de stage / Solo</p>
-    </div>
-</header>
+    <!-- HEADER PROJET -->
+    <header class="hero hero-small">
+        <div class="container text-center">
+            <h1>Jumping Knight</h1>
+            <p class="lead">Jeu vidéo / Projet de stage / Solo</p>
+        </div>
+    </header>
 
-<!-- CONTENU -->
-<section class="py-5">
-    <div class="container">
-        <div class="row g-5">
+    <!-- CONTENU PRINCIPAL -->
+    <section class="visible">
+        <div class="container">
+            <div class="row g-5">
 
-            <!-- IMAGE PRINCIPALE -->
-            <div class="col-md-6">
-                <img src="../images/JumpingKnightMilieu1.png" class="img-fluid rounded" alt="Image du projet">
+                <!-- IMAGE PRINCIPALE -->
+                <div class="col-md-6">
+                    <img src="../images/JumpingKnightMilieu1.png" class="img-project rounded"
+                        alt="Image du projet Jumping Knight">
+                </div>
+
+                <!-- INFOS RAPIDES -->
+                <div class="col-md-6 project-info">
+                    <h3>Informations</h3>
+                    <ul class="project-list">
+                        <li><strong>Type :</strong> 2D</li>
+                        <li><strong>Moteur :</strong> Construct 3</li>
+                        <li><strong>Durée :</strong> 3 heures</li>
+                        <li><strong>Statut :</strong> En développement</li>
+                    </ul>
+
+                    <div class="mt-4 d-flex gap-2 flex-wrap">
+                        <a href="https://kantixt.itch.io/jumping-knight" class="btn btn-primary" target="_blank">
+                            Voir le jeu
+                        </a>
+                        <a href="../projets/JumpingKnight.c3p" class="btn btn-outline-secondary">
+                            Télécharger
+                        </a>
+                    </div>
+                </div>
+
             </div>
+        </div>
+    </section>
 
-            <!-- INFOS RAPIDES -->
-            <div class="col-md-6">
-                <h3>Informations</h3>
-                <ul class="list-group">
-                    <li class="list-group-item"><strong>Type :</strong> 2D</li>
-                    <li class="list-group-item"><strong>Moteur :</strong> Construct 3</li>
-                    <li class="list-group-item"><strong>Durée :</strong> 3 heures</li>
-                    <li class="list-group-item"><strong>Statut :</strong> En développement</li>
-                </ul>
+    <!-- DESCRIPTION -->
+    <section class="bg-section visible">
+        <div class="container">
+            <h3>Description du projet</h3>
+            <p>
+                Dans ce jeu, le joueur incarne un <strong>chevalier</strong> qui saute de
+                <strong>plateforme en plateforme</strong> afin de progresser dans le niveau
+                et atteindre le <strong>trésor final</strong>.
+            </p>
+            <p>
+                Tout au long du parcours, il doit <strong>éviter ou éliminer des squelettes</strong>
+                dangereux. Les ennemis peuvent être vaincus en leur <strong>sautant sur la tête</strong>,
+                mais une mauvaise gestion des déplacements entraîne la mort du joueur.
+            </p>
+            <p>
+                J’ai développé le <strong>système de déplacement</strong>, la <strong>gestion de la vie</strong>
+                et des <strong>conditions de mort</strong>, ainsi que le <strong>level design</strong>
+                afin de proposer une progression cohérente et équilibrée.
+            </p>
+        </div>
+    </section>
 
-                <div class="mt-4 d-flex gap-2">
-                    <a href="https://kantixt.itch.io/jumping-knight" class="btn btn-primary" target="_blank">Voir le jeu</a>
-                    <a href="../projets/JumpingKnight.c3p" class="btn btn-outline-secondary">Télécharger</a>
+    <!-- GALERIE -->
+    <section class="bg-section visible">
+        <div class="container">
+            <h3 class="mb-4">Galerie</h3>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <a href="../images/JumpingKnightMilieu2.png" target="_blank">
+                        <img src="../images/JumpingKnightMilieu2.png" class="img-project rounded"
+                            alt="Jumping Knight - Milieu du niveau">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="../images/JumpingKnightMilieu1.png" target="_blank">
+                        <img src="../images/JumpingKnightMilieu1.png" class="img-project rounded"
+                            alt="Jumping Knight - Gameplay">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="../images/JumpingKnightFin.png" target="_blank">
+                        <img src="../images/JumpingKnightFin.png" class="img-project rounded"
+                            alt="Jumping Knight - Fin du niveau">
+                    </a>
                 </div>
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- DESCRIPTION -->
-<section class="bg-light py-5">
-    <div class="container">
-        <h3>Description du projet</h3>
-        <p>
-            Dans ce jeu, nous jouons un chevalier qui saute d'une plateforme à l'autre. 
-            Tout au long du chemin, il doit éviter ou tuer des squelettes dangereux afin d'atteindre le trésor à la fin du niveau.
-        </p>
-        <p>
-            J'ai créé le système de déplacements du joueur, la gestion de la vie du joueur et les conditions de morts, 
-            le moyen de tuer des ennemis en leur sautant sur la tête et j'ai fait le level design.
-        </p>
-    </div>
-</section>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p class="mb-0">© 2026 - Tom HACOT</p>
+    </footer>
 
-<!-- CE QUE J'AI APPRIS -->
-<section class="py-5">
-    <div class="container">
-        <h3>Compétences développées</h3>
-        <ul>
-            <li>Programmation Lua</li>
-            <li>Gestion de projet</li>
-            <li>Game design</li>
-            <li>Résolution de problèmes</li>
-        </ul>
-    </div>
-</section>
+    <!-- SCRIPT JS -->
+    <script src="../script/script.js"></script>
+    <script>
+        const toggler = document.getElementById('navbar-toggler');
+        const nav = document.getElementById('navbar-nav');
 
-<!-- GALERIE -->
-<section class="bg-light py-5">
-    <div class="container">
-        <h3 class="mb-4">Galerie</h3>
-        <div class="row g-3">
-            <div class="col-md-4">
-                <a href="../images/JumpingKnightMilieu2.png" target="_blank">
-                    <img src="../images/JumpingKnightMilieu2.png" class="img-fluid rounded">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="../images/JumpingKnightMilieu1.png" target="_blank">
-                    <img src="../images/JumpingKnightMilieu1.png" class="img-fluid rounded">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="../images/JumpingKnightFin.png" target="_blank">
-                    <img src="../images/JumpingKnightFin.png" class="img-fluid rounded">
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+        toggler.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
 
-<!-- FOOTER -->
-<footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">© 2026 - Tom HACOT</p>
-</footer>
+        const sections = document.querySelectorAll('section');
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        function revealSections() {
+            const triggerBottom = window.innerHeight * 0.85;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealSections);
+        window.addEventListener('load', revealSections);
+    </script>
+
 </body>
+
 </html>

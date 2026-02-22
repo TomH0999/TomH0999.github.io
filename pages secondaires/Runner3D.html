@@ -1,119 +1,135 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Runner 3D - Portfolio</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS perso -->
+    <link rel="stylesheet" href="../style/style.css">
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="../index.html">Tom HACOT</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="../index.html#projects">Projets</a></li>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Tom HACOT</a>
+            <button class="navbar-toggler" id="navbar-toggler">☰</button>
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a class="nav-link" href="../index.html">Accueil</a></li>
+                <li><a class="nav-link" href="../index.html#projects">Projets</a></li>
             </ul>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- HEADER PROJET -->
-<header class="bg-light py-5">
-    <div class="container">
-        <h1 class="display-5">Runner 3D</h1>
-        <p class="lead">Jeu vidéo / Projet de stage / Personnel</p>
-    </div>
-</header>
+    <!-- HEADER PROJET -->
+    <header class="hero hero-small">
+        <div class="container text-center">
+            <h1>Runner 3D</h1>
+            <p class="lead">Jeu vidéo / Projet de stage / Personnel</p>
+        </div>
+    </header>
 
-<!-- CONTENU -->
-<section class="py-5">
-    <div class="container">
-        <div class="row g-5">
+    <!-- CONTENU PRINCIPAL -->
+    <section class="visible">
+        <div class="container">
+            <div class="row g-5">
 
-            <!-- IMAGE PRINCIPALE -->
-            <div class="col-md-6">
-                <img src="../images/Runner3D.gif" class="img-fluid rounded">
+                <!-- IMAGE PRINCIPALE -->
+                <div class="col-md-6">
+                    <img src="../images/Runner3D.gif" class="img-project rounded" alt="Image du projet Runner 3D">
+                </div>
+
+                <!-- INFOS RAPIDES -->
+                <div class="col-md-6 project-info">
+                    <h3>Informations</h3>
+                    <ul class="project-list">
+                        <li><strong>Type :</strong> 3D</li>
+                        <li><strong>Moteur :</strong> Unity</li>
+                        <li><strong>Langage :</strong> C#</li>
+                        <li><strong>Durée :</strong> 3 heures</li>
+                        <li><strong>Statut :</strong> Projet d'entraînement</li>
+                    </ul>
+
+                    <!--<div class="mt-4 d-flex gap-2 flex-wrap">
+                        <a href="#" class="btn btn-primary" target="_blank">Voir le jeu</a>
+                        <a href="#" class="btn btn-outline-secondary">Code / GitHub</a>
+                    </div>-->
+                </div>
+
             </div>
+        </div>
+    </section>
 
-            <!-- INFOS RAPIDES -->
-            <div class="col-md-6">
-                <h3>Informations</h3>
-                <ul class="list-group">
-                    <li class="list-group-item"><strong>Type :</strong> 3D</li>
-                    <li class="list-group-item"><strong>Moteur :</strong> Unity</li>
-                    <li class="list-group-item"><strong>Langage :</strong> C#</li>
-                    <li class="list-group-item"><strong>Durée :</strong> 3 heures</li>
-                    <li class="list-group-item"><strong>Statut :</strong> Projet d'entraînement</li>
-                </ul>
+    <!-- DESCRIPTION -->
+    <section class="bg-section visible">
+        <div class="container">
+            <h3>Description du projet</h3>
+            <p>
+                Dans ce jeu, le joueur contrôle un <strong>cube rouge</strong> qui avance automatiquement avec pour
+                objectif
+                d’aller <strong>le plus loin possible</strong> afin d’augmenter son <strong>score</strong>.
+                Le joueur peut se déplacer <strong>de gauche à droite</strong> pour éviter les obstacles.
+            </p>
+            <p>
+                Si un obstacle est touché, <strong>le jeu s’arrête</strong> et le score n’augmente plus.
+                Le cube accélère progressivement, ce qui augmente la difficulté au fil du temps.
+            </p>
+            <p>
+                J’ai implémenté le <strong>système de déplacement</strong>, l’<strong>affichage du score</strong> basé
+                sur la distance parcourue
+                et réalisé le <strong>level design</strong> afin d’obtenir une difficulté équilibrée.
+            </p>
+        </div>
+    </section>
 
-                <div class="mt-4 d-flex gap-2">
-                    <a href="#" class="btn btn-primary" target="_blank">Voir le jeu</a>
-                    <a href="#" class="btn btn-outline-secondary">Code / GitHub</a>
+    <!-- GALERIE -->
+    <section class="bg-section visible">
+        <div class="container">
+            <h3 class="mb-4">Galerie</h3>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <a href="../images/Runner3D.png" target="_blank">
+                        <img src="../images/Runner3D.png" class="img-project rounded" alt="Screenshot Runner 3D">
+                    </a>
                 </div>
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- DESCRIPTION -->
-<section class="bg-light py-5">
-    <div class="container">
-        <h3>Description du projet</h3>
-        <p>
-            Dans ce jeu nous pouvons déplacer un cube rouge qui a pour objectif d' <strong>avancer le plus loin possible</strong>, faisant augmenter le <strong>score</strong>, sans se prendre d'<strong>obstacle</strong>.
-            S'il en touche un <strong>le jeu s'arrête</strong> et le score n'augmente plus.
-            Le cube avance en continu en accélérant petit à petit et nous pouvons le déplacer de gauche à droite afin d'éviter les obstacles.
-        </p>
-        <p>
-            Dans ce projet, j'ai créé le <strong>système de déplacements</strong> du cube, l'<strong>affichage du score</strong> qui augmente en fonction de la distance parcourue, 
-            et fait le <strong>level design</strong> du jeu, c'est à dire placer les obstacles pour <strong>gérer la difficulté</strong> pour que cela soit ni impossible ni trop facile.
-        </p>
-    </div>
-</section>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p class="mb-0">© 2026 - Tom HACOT</p>
+    </footer>
 
-<!-- CE QUE J'AI APPRIS -->
-<section class="py-5">
-    <div class="container">
-        <h3>Compétences développées</h3>
-        <ul>
-            <li>Programmation C#</li>
-            <li>Utilisation d'Unity</li>
-            <li>Level Design</li>
-            <li>...</li>
-        </ul>
-    </div>
-</section>
+    <!-- SCRIPT JS -->
+    <script src="../script/script.js"></script>
+    <script>
+        const toggler = document.getElementById('navbar-toggler');
+        const nav = document.getElementById('navbar-nav');
 
-<!-- GALERIE -->
-<section class="bg-light py-5">
-    <div class="container">
-        <h3 class="mb-4">Galerie</h3>
-        <div class="row g-3">
-            <div class="col-md-4">
-                <a href="../images/Runner3D.png" target="_blank">
-                    <img src="../images/Runner3D.png" class="img-fluid rounded">
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+        toggler.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
 
-<!-- FOOTER -->
-<footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">© 2026 - Tom HACOT</p>
-</footer>
+        const sections = document.querySelectorAll('section');
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        function revealSections() {
+            const triggerBottom = window.innerHeight * 0.85;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealSections);
+        window.addEventListener('load', revealSections);
+    </script>
+
 </body>
+
 </html>

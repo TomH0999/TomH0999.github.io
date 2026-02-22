@@ -1,115 +1,130 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Labyrinth3D - Portfolio</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS perso -->
+    <link rel="stylesheet" href="../style/style.css">
 </head>
-<body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="../index.html">Tom HACOT</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="../index.html/projects">Projets</a></li>
+<body class="bg-dark text-light">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Tom HACOT</a>
+            <button class="navbar-toggler" id="navbar-toggler">☰</button>
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a class="nav-link" href="../index.html">Accueil</a></li>
+                <li><a class="nav-link" href="../index.html#projects">Projets</a></li>
             </ul>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- HEADER PROJET -->
-<header class="bg-light py-5">
-    <div class="container">
-        <h1 class="display-5">Labyrinth3D</h1>
-        <p class="lead">Jeu vidéo / Projet personnel / solo</p>
-    </div>
-</header>
+    <!-- HEADER PROJET -->
+    <header class="hero hero-small bg-dark">
+        <div class="container text-center">
+            <h1>Labyrinth3D</h1>
+            <p class="lead text-secondary">Jeu vidéo · Projet personnel · Solo</p>
+        </div>
+    </header>
 
-<!-- CONTENU -->
-<section class="py-5">
-    <div class="container">
-        <div class="row g-5">
+    <!-- CONTENU PRINCIPAL -->
+    <section class="visible">
+        <div class="container">
+            <div class="row g-5 align-items-center">
 
-            <!-- IMAGE PRINCIPALE -->
-            <div class="col-md-6">
-                <img src="../images/projet-exemple.png" class="img-fluid rounded" alt="Image du projet">
+                <!-- IMAGE PRINCIPALE -->
+                <div class="col-md-6">
+                    <img src="../images/projet-exemple.png" class="img-project rounded shadow"
+                        alt="Labyrinth3D - Gameplay">
+                </div>
+
+                <!-- INFOS RAPIDES -->
+                <div class="col-md-6 project-info">
+                    <h3>Informations</h3>
+                    <ul class="project-list">
+                        <li><strong>Type :</strong> 3D, First Person</li>
+                        <li><strong>Moteur :</strong> Unreal Engine</li>
+                        <li><strong>Langage :</strong> Blueprint</li>
+                        <li><strong>Durée :</strong> 1 semaine</li>
+                        <li><strong>Statut :</strong> En développement</li>
+                    </ul>
+                    <!--<div class="mt-4 d-flex gap-2 flex-wrap">
+                        <a href="#" class="btn btn-primary" target="_blank">Voir le jeu</a>
+                    </div>-->
+                </div>
+
             </div>
+        </div>
+    </section>
 
-            <!-- INFOS RAPIDES -->
-            <div class="col-md-6">
-                <h3>Informations</h3>
-                <ul class="list-group">
-                    <li class="list-group-item"><strong>Type :</strong> 3D, 1st Person</li>
-                    <li class="list-group-item"><strong>Moteur :</strong> Unreal Engine</li>
-                    <li class="list-group-item"><strong>Langages :</strong> Blueprint </li>
-                    <li class="list-group-item"><strong>Durée :</strong> 1 semaine</li>
-                    <li class="list-group-item"><strong>Statut :</strong> En développement</li>
-                </ul>
+    <!-- DESCRIPTION -->
+    <section class="bg-section visible bg-dark">
+        <div class="container">
+            <h3>Description du projet</h3>
+            <p class="text-secondary">
+                Labyrinth3D est un jeu en vue à la première personne dans lequel le joueur
+                doit s’orienter et progresser à travers un labyrinthe en 3D.
+                Ce projet personnel a pour objectif de me familiariser avec Unreal Engine
+                et la programmation en Blueprint.
+            </p>
+            <p class="text-secondary">
+                J’ai travaillé sur les déplacements du joueur, la gestion de la caméra,
+                les interactions de base ainsi que la structure du niveau.
+            </p>
+        </div>
+    </section>
 
-                <div class="mt-4 d-flex gap-2">
-                    <a href="#" class="btn btn-primary" target="_blank">Voir le jeu</a>
-                    <a href="#" class="btn btn-outline-secondary">Télécharger</a>
+    <!-- GALERIE -->
+    <section class="bg-section visible bg-dark">
+        <div class="container">
+            <h3 class="mb-4">Galerie</h3>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <a href="../images/screen1.png" target="_blank">
+                        <img src="../images/screen1.png" class="img-project rounded shadow"
+                            alt="Labyrinth3D - Screenshot 1">
+                    </a>
                 </div>
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- DESCRIPTION -->
-<section class="bg-light py-5">
-    <div class="container">
-        <h3>Description du projet</h3>
-        <p>
-            Explique ici le projet en détail :
-            le concept, l’objectif, ce que tu as développé,
-            les mécaniques principales, etc.
-        </p>
-    </div>
-</section>
+    <!-- FOOTER -->
+    <footer class="footer bg-dark text-secondary text-center">
+        <p class="mb-0">© 2026 — Tom HACOT</p>
+    </footer>
 
-<!-- CE QUE J'AI APPRIS -->
-<section class="py-5">
-    <div class="container">
-        <h3>Compétences développées</h3>
-        <ul>
-            <li>Programmation Blueprint</li>
-            <li>Utilisation Unreal Engine</li>
-            <li>Déplacements 3D</li>
-            <li>Animations du joueur</li>
-        </ul>
-    </div>
-</section>
+    <!-- SCRIPT JS -->
+    <script src="../script/script.js"></script>
+    <script>
+        const toggler = document.getElementById('navbar-toggler');
+        const nav = document.getElementById('navbar-nav');
 
-<!-- GALERIE -->
-<section class="bg-light py-5">
-    <div class="container">
-        <h3 class="mb-4">Galerie</h3>
-        <div class="row g-3">
-            <div class="col-md-4">
-                <a href="../images/screen1.png" target="_blank">
-                    <img src="../images/screen1.png" class="img-fluid rounded">
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+        toggler.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
 
-<!-- FOOTER -->
-<footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">© 2026 - Tom HACOT</p>
-</footer>
+        const sections = document.querySelectorAll('section');
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        function revealSections() {
+            const triggerBottom = window.innerHeight * 0.85;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealSections);
+        window.addEventListener('load', revealSections);
+    </script>
+
 </body>
+
 </html>
