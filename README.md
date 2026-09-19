@@ -2,6 +2,6 @@
 
 Bienvenue sur mon portfolio!
 
-Je suis Tom, j'ai 17 ans, je suis passionné de jeux vidéo depuis toujours et depuis quelques années, je m'intéresse beaucoup à leur création. J'ai ainsi décidé de faire de cette passion mon futur métier et j'ai choisi de faire une licence informatique parcours jeu vidéo au CNAM ENJMIN d'Angoulème en programmation.
+Je suis Tom, j'ai 17 ans, je suis passionné de jeux vidéo et d'informatique depuis toujours et depuis quelques années, je m'intéresse beaucoup à la programmation. J'ai ainsi choisi de faire un BUT Informatique à l'IUT de Sète et de poursuivre le parcours RACDV (Réalisation d'Applications : Conception, Développement, Validation) en deuxième année.
 
-Découvrez mes réalisations et projets entamés dans ce portfolio!
+Découvrez mes réalisations et projets commencés dans ce portfolio!
