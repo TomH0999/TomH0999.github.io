@@ -4,20 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mastermind - Portfolio</title>
-
-    <!-- CSS perso -->
+    <title>Mastermind - Portfolio Tom HACOT</title>
     <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
 
     <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">Tom HACOT</a>
-            <button class="navbar-toggler" id="navbar-toggler">☰</button>
-            <ul class="navbar-nav" id="navbar-nav">
+    <nav class="top-nav">
+        <div class="main-wrapper">
+            <a class="nav-logo" href="../index.html">Tom HACOT</a>
+            <button class="nav-toggle-btn" id="nav-toggle-btn">☰</button>
+            <ul class="nav-links" id="nav-links">
                 <li><a class="nav-link" href="../index.html">Accueil</a></li>
                 <li><a class="nav-link" href="../index.html#projects">Projets</a></li>
             </ul>
@@ -25,38 +23,44 @@
     </nav>
 
     <!-- HEADER PROJET -->
-    <header class="hero hero-small">
-        <div class="container text-center">
-            <h1>Mastermind</h1>
-            <p class="lead">Jeu Python / Projet de stage</p>
+    <header class="hero-banner" style="padding: 4rem 1rem; margin-bottom: 2rem;">
+        <div class="main-wrapper text-center">
+            <h1 style="font-size: 2.5rem;">Mastermind</h1>
+            <p style="font-size: 1.2rem; color: #E0E0E0;">Jeu Python / Projet de stage</p>
         </div>
     </header>
 
-    <!-- CONTENU PRINCIPAL -->
-    <section class="visible">
-        <div class="container">
-            <div class="row g-5">
+    <!-- CONTENU PRINCIPAL : INFO & IMAGE (Avec effet flou) -->
+    <section class="page-section is-visible">
+        <div class="main-wrapper">
+            <div class="project-intro-grid">
 
-                <!-- IMAGE PRINCIPALE -->
-                <div class="col-md-6">
-                    <img src="../images/MastermindPython.png" class="img-project rounded"
-                        alt="Image du projet Mastermind">
+                <!-- COLONNE GAUCHE : IMAGE AVEC FOND FLOUTÉ -->
+                <div class="project-image-column" style="--bg-image: url('../images/MastermindPython.png');">
+                    <img src="../images/MastermindPython.png" alt="Capture d'écran du jeu Mastermind en Python">
                 </div>
 
-                <!-- INFOS RAPIDES -->
-                <div class="col-md-6 project-info">
-                    <h3>Informations</h3>
-                    <ul class="project-list">
-                        <li><strong>Type :</strong> Jeu sous forme de texte</li>
-                        <li><strong>Logiciel :</strong> Visual Studio Code</li>
-                        <li><strong>Langage :</strong> Python</li>
-                        <li><strong>Durée :</strong> 2 heures</li>
-                        <li><strong>Statut :</strong> Terminé</li>
-                    </ul>
+                <!-- COLONNE DROITE : INFORMATIONS -->
+                <div class="project-info-column">
+                    <div class="card-content" style="padding: 0;">
+                        <h3 class="project-details-title" style="text-align: left; margin-bottom: 1.5rem;">Informations</h3>
+                        
+                        <ul class="feature-list">
+                            <li><strong>Type :</strong> Jeu sous forme de texte</li>
+                            <li><strong>Logiciel :</strong> Visual Studio Code</li>
+                            <li><strong>Langage :</strong> Python</li>
+                            <li><strong>Durée :</strong> 2 heures</li>
+                            <li><strong>Statut :</strong> Terminé</li>
+                        </ul>
 
-                    <div class="mt-4 d-flex gap-2 flex-wrap">
-                        <a href="https://github.com/TomH0999/TomH0999.github.io/blob/main/projets/Mastermind.py" class="btn btn-primary" target="_blank">Voir le jeu</a>
-                        <a href="../projets/Mastermind.py" class="btn btn-outline-secondary">Télécharger</a>
+                        <div style="margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="https://github.com/TomH0999/TomH0999.github.io/blob/main/projets/Mastermind.py" class="btn-primary-cyan" target="_blank">
+                                Voir le jeu
+                            </a>
+                            <a href="../projets/Mastermind.py" class="btn-outline-cyan" download>
+                                Télécharger
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -65,70 +69,46 @@
     </section>
 
     <!-- DESCRIPTION -->
-    <section class="bg-section visible">
-        <div class="container">
-            <h3>Description du projet</h3>
-            <p>
-                Ce projet a été réalisé dans le cadre de mon stage chez Digi Activity afin
-                d’<strong>apprendre les bases du Python</strong>.
-                Il s’agit d’une reproduction du jeu de société <strong>Mastermind</strong>, dans lequel
-                le joueur doit deviner un <strong>code secret</strong> généré aléatoirement.
-            </p>
-            <p>
-                J’ai implémenté la <strong>génération du code aléatoire</strong>, l’<strong>interaction avec le
-                    joueur</strong>
-                via le terminal, la <strong>comparaison entre la proposition et le code secret</strong>,
-                ainsi que la <strong>gestion du nombre d’essais restants</strong>.
-            </p>
+    <section class="page-section is-visible">
+        <div class="main-wrapper">
+            <div class="project-description-box">
+                <h3 class="project-details-title">Description du projet</h3>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
+                    Ce projet a été réalisé dans le cadre de mon stage chez Digi Activity afin
+                    d'<strong>apprendre les bases du Python</strong>.
+                    Il s'agit d'une reproduction du jeu de société <strong>Mastermind</strong>, dans lequel
+                    le joueur doit deviner un <strong>code secret</strong> généré aléatoirement.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    J'ai implémenté la <strong>génération du code aléatoire</strong>, l'<strong>interaction avec le
+                        joueur</strong>
+                    via le terminal, la <strong>comparaison entre la proposition et le code secret</strong>,
+                    ainsi que la <strong>gestion du nombre d'essais restants</strong>.
+                </p>
+            </div>
         </div>
     </section>
 
-    <!-- GALERIE -->
-    <section class="bg-section visible">
-        <div class="container">
-            <h3 class="mb-4">Galerie</h3>
-            <div class="row g-3">
-                <div class="col-md-4">
-                    <a href="../images/MastermindPython.png" target="_blank">
-                        <img src="../images/MastermindPython.png" class="img-project rounded"
-                            alt="Screenshot Mastermind">
-                    </a>
+    <!-- GALERIE (Liens <a> supprimés pour la Lightbox) -->
+    <section class="page-section is-visible">
+        <div class="main-wrapper">
+            <h3 class="project-details-title" style="margin-bottom: 3rem;">Galerie</h3>
+            
+            <div class="project-gallery-grid">
+                <div class="info-card" style="border: none; background: transparent; box-shadow: none;">
+                    <img src="../images/MastermindPython.png" class="single-project-img" alt="Screenshot Mastermind Python">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="site-footer">
         <p class="mb-0">© 2026 - Tom HACOT</p>
     </footer>
 
     <!-- SCRIPT JS -->
     <script src="../script/script.js"></script>
-    <script>
-        const toggler = document.getElementById('navbar-toggler');
-        const nav = document.getElementById('navbar-nav');
-
-        toggler.addEventListener('click', () => {
-            nav.classList.toggle('show');
-        });
-
-        const sections = document.querySelectorAll('section');
-
-        function revealSections() {
-            const triggerBottom = window.innerHeight * 0.85;
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                if (sectionTop < triggerBottom) {
-                    section.classList.add('visible');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', revealSections);
-        window.addEventListener('load', revealSections);
-    </script>
-
 </body>
 
 </html>

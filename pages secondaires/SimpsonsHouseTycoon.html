@@ -1,136 +1,116 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Simpsons House Tycoon - Portfolio</title>
-
-    <!-- CSS perso -->
+    <title>Simpsons House Tycoon - Portfolio Tom HACOT</title>
     <link rel="stylesheet" href="../style/style.css">
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="container">
-        <a class="navbar-brand" href="../index.html">Tom HACOT</a>
-        <button class="navbar-toggler" id="navbar-toggler">☰</button>
-        <ul class="navbar-nav" id="navbar-nav">
-            <li><a class="nav-link" href="../index.html">Accueil</a></li>
-            <li><a class="nav-link" href="../index.html#projects">Projets</a></li>
-        </ul>
-    </div>
-</nav>
+    <!-- NAVBAR -->
+    <nav class="top-nav">
+        <div class="main-wrapper">
+            <a class="nav-logo" href="../index.html">Tom HACOT</a>
+            <button class="nav-toggle-btn" id="nav-toggle-btn">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a class="nav-link" href="../index.html">Accueil</a></li>
+                <li><a class="nav-link" href="../index.html#projects">Projets</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<!-- HEADER PROJET -->
-<header class="hero hero-small">
-    <div class="container text-center">
-        <h1>Simpsons House Tycoon</h1>
-        <p class="lead">Jeu vidéo / Projet personnel</p>
-    </div>
-</header>
+    <!-- HEADER PROJET -->
+    <header class="hero-banner" style="padding: 4rem 1rem; margin-bottom: 2rem;">
+        <div class="main-wrapper text-center">
+            <h1 style="font-size: 2.5rem;">Simpsons House Tycoon</h1>
+            <p style="font-size: 1.2rem; color: #E0E0E0;">Jeu vidéo / Projet personnel</p>
+        </div>
+    </header>
 
-<!-- CONTENU PRINCIPAL -->
-<section class="visible">
-    <div class="container">
-        <div class="row g-5">
+    <!-- CONTENU PRINCIPAL : INFO & IMAGE (Avec effet flou) -->
+    <section class="page-section is-visible">
+        <div class="main-wrapper">
+            <div class="project-intro-grid">
 
-            <!-- IMAGE PRINCIPALE -->
-            <div class="col-md-6">
-                <img src="../images/SimpsonsHouseTycoonFin.png" class="img-project rounded" alt="Image du projet">
+                <!-- COLONNE GAUCHE : IMAGE AVEC FOND FLOUTÉ -->
+                <div class="project-image-column" style="--bg-image: url('../images/SimpsonsHouseTycoonFin.png');">
+                    <img src="../images/SimpsonsHouseTycoonFin.png" alt="Capture d'écran du jeu Simpsons House Tycoon">
+                </div>
+
+                <!-- COLONNE DROITE : INFORMATIONS -->
+                <div class="project-info-column">
+                    <div class="card-content" style="padding: 0;">
+                        <h3 class="project-details-title" style="text-align: left; margin-bottom: 1.5rem;">Informations</h3>
+                        
+                        <ul class="feature-list">
+                            <li><strong>Type :</strong> 3D, 1st/3rd Person</li>
+                            <li><strong>Moteur :</strong> Roblox Studio</li>
+                            <li><strong>Langage :</strong> Luau</li>
+                            <li><strong>Durée :</strong> 1 semaine / ~8 heures</li>
+                            <li><strong>Statut :</strong> En développement</li>
+                        </ul>
+
+                        <div style="margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="https://www.roblox.com/fr/games/139063625913599/Simpsons-House-Tycoon" class="btn-primary-cyan" target="_blank">
+                                Voir le jeu
+                            </a>
+                            <a href="../projets/SimpsonsHouseTycoon.rbxl" class="btn-outline-cyan" download>
+                                Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+        </div>
+    </section>
 
-            <!-- INFOS RAPIDES -->
-            <div class="col-md-6 project-info">
-                <h3>Informations</h3>
-                <ul class="project-list">
-                    <li><strong>Type :</strong> 3D, 1st/3rd Person</li>
-                    <li><strong>Moteur :</strong> Roblox Studio</li>
-                    <li><strong>Langages :</strong> Luau</li>
-                    <li><strong>Durée :</strong> 1 semaine / ~8 heures de travail</li>
-                    <li><strong>Statut :</strong> En développement (reste éléments de jeu à placer mais scripts terminés)</li>
-                </ul>
+    <!-- DESCRIPTION -->
+    <section class="page-section is-visible">
+        <div class="main-wrapper">
+            <div class="project-description-box">
+                <h3 class="project-details-title">Description du projet</h3>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
+                    Dans ce jeu, nous gagnons 10$ par seconde et grâce à l'argent accumulé, nous pouvons acheter des parties de la maison des Simpsons jusqu'à recréer la maison en entier.
+                    L'objectif de ce projet était de <strong>tester Roblox Studio</strong> et <strong>apprendre les bases du Luau</strong>, et également de créer mon premier jeu sur Roblox.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    Le jeu n'est pas encore terminé, il reste à placer des éléments de la maison à faire apparaître grâce aux boutons correspondant qui sont également à placer.
+                    J'ai codé le <strong>système d'argent</strong>, le <strong>système d'apparition</strong> des éléments de la maison en marchant sur un bouton et j'ai créé le <strong>décor du jeu</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
 
-                <div class="mt-4 d-flex gap-2 flex-wrap">
-                    <a href="https://www.roblox.com/fr/games/139063625913599/Simpsons-House-Tycoon" class="btn btn-primary" target="_blank">Voir le jeu</a>
-                    <a href="../projets/SimpsonsHouseTycoon.rbxl" class="btn btn-outline-secondary">Télécharger</a>
+    <!-- GALERIE (Liens <a> supprimés pour la Lightbox) -->
+    <section class="page-section is-visible">
+        <div class="main-wrapper">
+            <h3 class="project-details-title" style="margin-bottom: 3rem;">Galerie</h3>
+            
+            <div class="project-gallery-grid">
+                <div class="info-card" style="border: none; background: transparent; box-shadow: none;">
+                    <img src="../images/SimpsonsHouseTycoonDebut.png" class="single-project-img" alt="Début du jeu">
+                </div>
+                <div class="info-card" style="border: none; background: transparent; box-shadow: none;">
+                    <img src="../images/SimpsonsHouseTycoonMilieu.png" class="single-project-img" alt="Milieu du jeu">
+                </div>
+                <div class="info-card" style="border: none; background: transparent; box-shadow: none;">
+                    <img src="../images/SimpsonsHouseTycoonFin.png" class="single-project-img" alt="Fin du jeu">
                 </div>
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- DESCRIPTION -->
-<section class="bg-section visible">
-    <div class="container">
-        <h3>Description du projet</h3>
-        <p>
-            Dans ce jeu, nous gagnons 10$ par seconde et grâce à l'argent accumulé, nous pouvons acheter des parties de la maison des Simpsons jusqu'à recréer la maison en entier.
-            L'objectif de ce projet était de <strong>tester Roblox Studio</strong> et <strong>apprendre les bases du Luau</strong>, et également de créer mon premier jeu sur Roblox.
-        </p>
-        <p>            
-            Le jeu n'est pas encore terminé, il reste à placer des éléments de la maison à faire apparaître grâce aux boutons correspondant qui sont également à placer.
-            J'ai codé le <strong>système d'argent</strong>, le <strong>système d'apparition</strong> des éléments de la maison en marchant sur un bouton et j'ai créé le <strong>décor du jeu</strong>.
-        </p>
-    </div>
-</section>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p class="mb-0">© 2026 - Tom HACOT</p>
+    </footer>
 
-<!-- GALERIE -->
-<section class="bg-section visible">
-    <div class="container">
-        <h3 class="mb-4">Galerie</h3>
-        <div class="row g-3">
-            <div class="col-md-4">
-                <a href="../images/SimpsonsHouseTycoonDebut.png" target="_blank">
-                    <img src="../images/SimpsonsHouseTycoonDebut.png" class="img-project rounded">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="../images/SimpsonsHouseTycoonMilieu.png" target="_blank">
-                    <img src="../images/SimpsonsHouseTycoonMilieu.png" class="img-project rounded">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="../images/SimpsonsHouseTycoonFin.png" target="_blank">
-                    <img src="../images/SimpsonsHouseTycoonFin.png" class="img-project rounded">
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <p class="mb-0">© 2026 - Tom HACOT</p>
-</footer>
-
-<!-- SCRIPT JS -->
-<script src="../script/script.js"></script>
-<script>
-    // Navbar toggle mobile
-    const toggler = document.getElementById('navbar-toggler');
-    const nav = document.getElementById('navbar-nav');
-
-    toggler.addEventListener('click', () => {
-        nav.classList.toggle('show');
-    });
-
-    // Animation des sections au scroll
-    const sections = document.querySelectorAll('section');
-
-    function revealSections() {
-        const triggerBottom = window.innerHeight * 0.85;
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            if(sectionTop < triggerBottom) {
-                section.classList.add('visible');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', revealSections);
-    window.addEventListener('load', revealSections);
-</script>
+    <!-- SCRIPT JS -->
+    <script src="../script/script.js"></script>
 </body>
+
 </html>
